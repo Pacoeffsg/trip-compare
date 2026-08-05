@@ -41,7 +41,11 @@ body{margin:0;background:var(--ink);color:var(--sand);font-family:var(--body);fo
   transition:background-color .25s,color .25s;
   background-attachment:fixed}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-header{padding:56px 0 30px}
+header{padding:56px 0 30px;position:relative}
+.theme-toggle{position:absolute;top:26px;right:22px;display:flex;align-items:center;gap:10px;z-index:40}
+.theme-toggle span{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--sand-dim)}
+.theme-toggle .seg button{padding:6px 11px;font-size:.78rem}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua)}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.8rem);line-height:.94;
   letter-spacing:-.035em;margin:.28em 0 .18em;max-width:17ch}
@@ -184,7 +188,9 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
   .rord{text-align:left}
   .row .bar{grid-column:1/-1}
   .rtotal{text-align:left;grid-column:1/-1}
-  header{padding-top:38px}
+  header{padding-top:64px}
+  .theme-toggle{top:16px;right:22px}
+  .theme-toggle span{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -193,6 +199,13 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
 <body>
 
 <header class="wrap">
+  <div class="theme-toggle">
+    <span id="lblTheme">Appearance</span>
+    <div class="seg" role="group" aria-labelledby="lblTheme" id="segTheme">
+      <button data-theme="dark" aria-pressed="true">Dark</button>
+      <button data-theme="light" aria-pressed="false">Light</button>
+    </div>
+  </div>
   <p class="eyebrow">Pascal &amp; Ale · departing Sydney · 12–23 September 2026</p>
   <h1>Somewhere hot, with a view, and a room <em>worth waking up in.</em></h1>
   <p class="standfirst">Eleven nights, the two of you, and $10,000. A room that's actually designed costs about double a merely good one, so the real question isn't where you can afford to go — it's how many nights of proper architecture the budget buys once the flights are paid for. Switch strategies below and watch the answer move.</p>
@@ -246,13 +259,6 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
       </div>
     </div>
     <label class="check"><input type="checkbox" id="buffer" checked> Insurance + 10% contingency</label>
-    <div class="ctl">
-      <label id="lblTheme">Appearance</label>
-      <div class="seg" role="group" aria-labelledby="lblTheme" id="segTheme">
-        <button data-theme="dark" aria-pressed="true">Dark</button>
-        <button data-theme="light" aria-pressed="false">Light</button>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -320,13 +326,6 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
       </div>
     </div>
     <label class="check"><input type="checkbox" id="buffer" checked> Insurance + 10% contingency</label>
-    <div class="ctl">
-      <label id="lblTheme">Appearance</label>
-      <div class="seg" role="group" aria-labelledby="lblTheme" id="segTheme">
-        <button data-theme="dark" aria-pressed="true">Dark</button>
-        <button data-theme="light" aria-pressed="false">Light</button>
-      </div>
-    </div>
   </div>
 </div>
 
