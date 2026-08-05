@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12–23 September · Heat, scenery, and rooms worth waking up in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C1F33;--line:rgba(239,230,214,.16);--sand:#EFE6D6;--sand-dim:#9FA7B4;
+  --gold:#E9B44C;--coral:#E2564D;--aqua:#57A9B8;
+  --c-fly:#57A9B8;--c-stay:#E9B44C;--c-day:#8C9EC9;--c-extra:#C4736B;
+  --display:'Bricolage Grotesque','Instrument Sans',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--sand);font-family:var(--body);font-size:16px;line-height:1.5;
+  background-image:radial-gradient(120% 80% at 88% -10%,rgba(87,169,184,.16),transparent 60%),
+                   radial-gradient(90% 70% at 0% 0%,rgba(233,180,76,.09),transparent 55%);
+  background-attachment:fixed}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{padding:56px 0 30px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--aqua)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.8rem);line-height:.94;
+  letter-spacing:-.035em;margin:.28em 0 .18em;max-width:17ch}
+h1 em{font-style:normal;color:var(--gold)}
+.standfirst{max-width:60ch;color:#CFC9BC;font-size:1.03rem}
+.spec{display:flex;flex-wrap:wrap;margin-top:30px;border:1px solid var(--line);border-radius:3px;
+  overflow:hidden;background:rgba(255,255,255,.02)}
+.spec div{flex:1 1 130px;padding:13px 16px;border-right:1px solid var(--line)}
+.spec div:last-child{border-right:0}
+.spec dt{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-dim);margin:0 0 5px}
+.spec dd{margin:0;font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em}
+.panel{position:sticky;top:0;z-index:30;margin-top:34px;background:rgba(12,31,51,.94);
+  backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel .wrap{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:flex-end;padding-top:14px;padding-bottom:14px}
+.ctl{display:flex;flex-direction:column;gap:6px}
+.ctl label{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-dim)}
+.seg{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.seg button{appearance:none;border:0;background:transparent;color:var(--sand-dim);font-family:var(--body);
+  font-size:.82rem;font-weight:500;padding:7px 12px;cursor:pointer;border-right:1px solid var(--line);
+  transition:background .18s,color .18s;white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button:hover{color:var(--sand)}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--ink);font-weight:600}
+.stepper{display:flex;align-items:center;gap:4px;border:1px solid var(--line);border-radius:2px;padding:3px}
+.stepper button{appearance:none;border:0;background:rgba(255,255,255,.05);color:var(--sand);width:26px;
+  height:26px;border-radius:2px;cursor:pointer;font-size:15px;line-height:1;font-family:var(--mono)}
+.stepper button:hover{background:var(--gold);color:var(--ink)}
+.stepper span{font-family:var(--mono);font-size:.86rem;min-width:46px;text-align:center}
+.check{display:flex;align-items:center;gap:8px;font-size:.84rem;color:#CFC9BC;cursor:pointer;padding-bottom:7px}
+.check input{accent-color:var(--gold);width:16px;height:16px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:54px 0 6px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.025em;margin:0}
+.section-head p{margin:0;color:var(--sand-dim);font-size:.87rem;max-width:46ch}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0 22px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.06em;color:var(--sand-dim)}
+.legend span{display:flex;align-items:center;gap:6px}
+.swatch{width:11px;height:11px;border-radius:1px;display:block}
+.rail{position:relative;border-top:1px solid var(--line);--bl:190px;--br:110px}
+.ceiling{position:absolute;top:0;bottom:0;width:1px;background:var(--coral);z-index:5;pointer-events:none;
+  left:calc(var(--bl) + (100% - var(--bl) - var(--br)) * var(--p))}
+.ceiling::after{content:attr(data-label);position:absolute;top:-21px;left:0;transform:translateX(-50%);
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--coral);white-space:nowrap}
+.overzone{position:absolute;top:0;bottom:0;z-index:1;pointer-events:none;
+  left:calc(var(--bl) + (100% - var(--bl) - var(--br)) * var(--p));right:var(--br);
+  background:repeating-linear-gradient(135deg,rgba(226,86,77,.11) 0 5px,transparent 5px 10px)}
+.row{position:relative;z-index:3;display:grid;grid-template-columns:176px 1fr 96px;align-items:center;
+  gap:14px;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.row:hover .rname{color:var(--gold)}
+.rname{font-size:.85rem;font-weight:500;letter-spacing:-.01em;transition:color .18s;line-height:1.25}
+.rname small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sand-dim);margin-top:2px}
+.bar{display:flex;height:19px;border-radius:1px;overflow:hidden;background:rgba(255,255,255,.04)}
+.bar i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.8,.25,1)}
+.rtotal{font-family:var(--mono);font-size:.81rem;text-align:right;font-weight:500}
+.rtotal.over{color:var(--coral)}
+.rtotal.under{color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;margin-top:26px}
+.card{border:1px solid var(--line);border-radius:4px;padding:20px;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(233,180,76,.42);transform:translateY(-2px)}
+.card.flag-over{border-left:2px solid var(--coral)}
+.card.flag-under{border-left:2px solid var(--gold)}
+.ctag{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua)}
+.card h3{font-family:var(--display);font-weight:700;font-size:1.26rem;letter-spacing:-.025em;margin:7px 0 3px;line-height:1.1}
+.sub{color:var(--sand-dim);font-size:.82rem;margin:0 0 14px}
+.big{font-family:var(--mono);font-size:1.68rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.big.over{color:var(--coral)}
+.big.under{color:var(--gold)}
+.delta{font-family:var(--mono);font-size:.71rem;color:var(--sand-dim);margin-top:5px;line-height:1.5}
+.dials{display:flex;gap:22px;margin:16px 0 14px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dial{flex:1}
+.dial b{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--sand-dim);margin-bottom:6px}
+.pips{display:flex;gap:3px}
+.pip{width:100%;max-width:17px;height:4px;border-radius:2px;background:rgba(255,255,255,.13)}
+.pip.on{background:var(--aqua)}
+.pip.warn{background:var(--coral)}
+.pip.gold{background:var(--gold)}
+.dial em{font-style:normal;font-family:var(--mono);font-size:.78rem;color:var(--sand)}
+.wxline{font-size:.78rem;color:#CFC9BC;margin:0 0 13px}
+.stays{margin:0 0 14px;border-top:1px dashed var(--line);padding-top:12px}
+.stays h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);margin:0 0 9px;font-weight:500}
+.stay{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin-bottom:9px}
+.stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em}
+.stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap}
+.stay p{grid-column:1/-1;margin:1px 0 0;font-size:.78rem;color:var(--sand-dim);line-height:1.45}
+.meters{margin:0 0 13px;display:flex;flex-direction:column;gap:6px}
+.meter{display:grid;grid-template-columns:64px 1fr 62px;align-items:center;gap:9px;font-family:var(--mono);
+  font-size:9.5px;color:var(--sand-dim)}
+.meter b{font-weight:400;text-transform:uppercase;letter-spacing:.1em}
+.track{height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.track i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.8,.25,1)}
+.meter em{font-style:normal;text-align:right;color:var(--sand)}
+.card p.note{font-size:.85rem;color:#CFC9BC;margin:0 0 12px;line-height:1.48}
+.watch{font-size:.79rem;color:var(--coral);border-left:2px solid rgba(226,86,77,.5);padding:2px 0 2px 10px;margin-top:auto}
+.callout{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:3px;padding:22px 24px;
+  margin:44px 0 0;background:rgba(233,180,76,.05)}
+.callout h3{font-family:var(--display);font-weight:700;font-size:1.12rem;margin:0 0 9px;letter-spacing:-.02em}
+.callout p{margin:0 0 10px;font-size:.92rem;color:#CFC9BC}
+.callout p:last-child{margin-bottom:0}
+footer{margin:64px 0 70px;padding-top:26px;border-top:1px solid var(--line);font-size:.79rem;color:var(--sand-dim)}
+footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);
+  margin:0 0 10px;font-weight:500}
+footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
+.empty{padding:40px 0;color:var(--sand-dim);font-size:.9rem}
+@media (max-width:720px){
+  .rail{--bl:0px;--br:0px}
+  .row{grid-template-columns:1fr;gap:7px;padding:13px 0}
+  .rtotal{text-align:left}
+  header{padding-top:38px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <p class="eyebrow">Sydney · 12–23 September 2026 · 2 travellers · 11 nights</p>
+  <h1>Hot, scenic, and a room <em>worth the detour.</em></h1>
+  <p class="standfirst">A room that's actually designed costs about double a merely good one. So the question isn't where you can afford to go — it's how many nights of real architecture $10,000 buys once the flights are paid for. Switch strategies below and watch the answer change.</p>
+  <dl class="spec">
+    <div><dt>Departs</dt><dd>Sat 12 Sep</dd></div>
+    <div><dt>Returns</dt><dd>Wed 23 Sep</dd></div>
+    <div><dt>Ceiling</dt><dd>$10,000</dd></div>
+    <div><dt>Currency</dt><dd>AUD, both people</dd></div>
+    <div><dt>Wanted</dt><dd>Heat, views, design</dd></div>
+  </dl>
+</header>
+
+<div class="panel">
+  <div class="wrap">
+    <div class="ctl">
+      <label id="lblMode">Where you sleep</label>
+      <div class="seg" role="group" aria-labelledby="lblMode" id="segMode">
+        <button data-mode="simple" aria-pressed="false">Good rooms</button>
+        <button data-mode="split" aria-pressed="true">Split stay</button>
+        <button data-mode="design" aria-pressed="false">Design every night</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label for="stepSig">Signature nights</label>
+      <div class="stepper" id="stepSig">
+        <button type="button" data-n="-1" aria-label="One signature night fewer">−</button>
+        <span id="sigOut">4</span>
+        <button type="button" data-n="1" aria-label="One signature night more">+</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label id="lblFilter">Show</label>
+      <div class="seg" role="group" aria-labelledby="lblFilter" id="segFilter">
+        <button data-filter="all" aria-pressed="true">All</button>
+        <button data-filter="hot" aria-pressed="false">28°C+</button>
+        <button data-filter="japan" aria-pressed="false">Japan</button>
+        <button data-filter="europe" aria-pressed="false">Europe</button>
+        <button data-filter="fits" aria-pressed="false">Fits</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label id="lblSort">Order by</label>
+      <div class="seg" role="group" aria-labelledby="lblSort" id="segSort">
+        <button data-sort="total" aria-pressed="true">Cost</button>
+        <button data-sort="design" aria-pressed="false">Architecture</button>
+        <button data-sort="heat" aria-pressed="false">Heat</button>
+      </div>
+    </div>
+    <label class="check"><input type="checkbox" id="buffer" checked> Insurance + 10% contingency</label>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="section-head">
+    <h2>Against the ceiling</h2>
+    <p>Bars crossing the red line need trimming. Tap one to jump to the rooms.</p>
+  </div>
+  <div class="legend">
+    <span><i class="swatch" style="background:var(--c-fly)"></i> Flights</span>
+    <span><i class="swatch" style="background:var(--c-stay)"></i> Rooms</span>
+    <span><i class="swatch" style="background:var(--c-day)"></i> Food &amp; daily life</span>
+    <span><i class="swatch" style="background:var(--c-extra)"></i> Transfers, activities, buffer</span>
+  </div>
+  <div class="rail" id="rail"></div>
+
+  <div class="section-head" style="margin-top:62px">
+    <h2>The rooms, and what they cost</h2>
+    <p>Nightly rates are for two, typical September, before any deal. Architecture and heat are scored one to five.</p>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <div class="callout">
+    <h3>The one number that decides this trip</h3>
+    <p><strong>A design-led room runs roughly double an ordinary good one</strong> — around $400–500 a night against $200–250 in most of these places, and more in Japan. Over eleven nights that difference is about $2,500, which is a quarter of the entire budget. Nowhere with an expensive flight survives paying it every night.</p>
+    <p><strong>Which is why split stay is the setting that matters.</strong> Four nights in the building you actually came for, the rest in something clean and well-located, is how you get an Alila or an Argos into a $10k trip. Put the signature nights in the middle, not at the start — you'll be too jet-lagged to look at anything properly on night one.</p>
+    <p><strong>Your dates still carry three complications in Japan:</strong> Silver Week runs 19–23 September, the first full one since 2015, and your last five nights sit inside it. The Asian Games open in Aichi–Nagoya on 19 September. And mid-September is peak typhoon season in Okinawa, which averages about 7.7 approaches a year against three or four for the mainland.</p>
+  </div>
+
+  <footer>
+    <h4>Where the numbers come from</h4>
+    <ul>
+      <li><strong>Rooms</strong> — signature rates are the published or recently observed nightly price for the named properties: Alila Villas Uluwatu has shown around US$692 a night, Argos in Cappadocia from roughly US$273–330, Hoshinoya Taketomi across a 2026 band of about US$268–871 with US$746 seen mid-year. Ordinary-good rates use each destination's typical well-reviewed four-star. Tokyo's citywide average ran about ¥33,000 in May 2026, up nearly 13% year on year.</li>
+      <li><strong>Flights</strong> — anchored to fares quoted for these dates in early August 2026: Sydney–Nadi from about $386 return for 13–22 September; Sydney–Okinawa around $852 via Taipei; JAL Sydney–Tokyo from about $2,033 for September. Europe sits in a $1,800–2,500 shoulder band, with sub-$1,300 fares available on 27–43 hour routings.</li>
+      <li><strong>Daily spend</strong> — food, local transport, entries and incidentals per person per day, at the level each place genuinely costs.</li>
+      <li><strong>Buffer</strong> — insurance at roughly $90 a head plus 10% contingency. In a typhoon window that contingency is the whole point.</li>
+    </ul>
+    <p>Planning estimates, not quotes. Rates move daily and September 2026 has two demand events stacked into it — price the shortlist properly, and read the cancellation terms twice on anything south of Kyushu.</p>
+  </footer>
+</main>
+
+<script>
+const DEST = [
+  {
+    id:'bali', name:'Bali — Uluwatu, Canggu, Ubud', tag:'Indonesia', groups:['tropical'], air:0,
+    sub:'The most architecture per dollar, anywhere',
+    flight:600, mid:180, design:420, daily:90, extras:500,
+    heat:30, wx:5, arch:5,
+    wxLine:'Dry season, 28–31°C, reliable sun, warm sea',
+    note:'This is the answer to your brief and it is not close. Bali has more genuinely interesting contemporary architecture per square kilometre than anywhere else on this list, cliff-and-jungle scenery, guaranteed heat, and rates that leave room to actually stay in the good buildings.',
+    stays:[
+      {n:'Alila Villas Uluwatu', a:'≈$1,050', d:'WOHA. Cantilevered villas 100m above the Indian Ocean, three-tier infinity pool, lava-rock and reclaimed-ironwood palette. The reference project for tropical modernism.'},
+      {n:'Bambu Indah, Sayan', a:'≈$500', d:'Ibuku bamboo structures and relocated antique Javanese bridal houses above the Ayung gorge. Structurally the most interesting thing you can sleep in.'},
+      {n:'The Slow, Canggu', a:'≈$400', d:'Brutalist tropical — board-formed concrete, terrazzo, a serious art programme. Twelve rooms.'},
+      {n:'Private pool villa, Ubud', a:'$280–450', d:'The baseline. Rice-terrace views, open-plan pavilion, your own pool, for less than a Tokyo business hotel.'}
+    ],
+    watch:'Base in two areas, not five. Uluwatu to Ubud is two hours of traffic you will resent.'
+  },
+  {
+    id:'turkiye', name:'İstanbul, Cappadocia &amp; the Aegean', tag:'Europe · Türkiye', groups:['europe'], air:2,
+    sub:'Rooms carved into rock, at Turkish prices',
+    flight:1700, mid:170, design:380, daily:100, extras:800,
+    heat:29, wx:5, arch:5,
+    wxLine:'26–30°C, dry, the best month of the year',
+    note:'The only European option where design-led rooms and an $10k ceiling coexist. It is also the strongest pure architecture trip here — Byzantine, Ottoman and troglodyte in eleven days.',
+    stays:[
+      {n:'Argos in Cappadocia, Uçhisar', a:'$430–520', d:'A restored monastery complex — nine mansions stepping down the hillside, rooms reached through underground tunnels, some with private cave pools. One of the best adaptive-reuse projects anywhere.'},
+      {n:'Museum Hotel, Uçhisar', a:'≈$500', d:'Restored cave dwellings hung with an actual antiquities collection, facing Pigeon Valley.'},
+      {n:'Soho House İstanbul', a:'≈$320', d:'The 19th-century Palazzo Corpi, former US embassy. Frescoed ceilings, a Beyoğlu location, and a pool on the roof.'},
+      {n:'Georges Hotel Galata', a:'≈$280', d:'A restored Galata townhouse with Golden Horn views from the terrace.'}
+    ],
+    watch:'İstanbul needs four nights minimum. Don\'t add a third region — pick Cappadocia or the Aegean, not both.'
+  },
+  {
+    id:'jp-okinawa', name:'Okinawa main island + Tokyo', tag:'Japan · tropical', groups:['japan','tropical'], air:0,
+    sub:'Exactly what you asked for, at a price',
+    flight:1300, mid:230, design:470, daily:120, extras:900,
+    heat:30, wx:2, arch:5,
+    wxLine:'28°C and warm seas, but peak typhoon month',
+    note:'Heat, extraordinary water, and some of the most disciplined resort architecture in the world. The budget only works on a split stay, and the weather is a genuine gamble.',
+    stays:[
+      {n:'Hoshinoya Okinawa, Yomitan', a:'≈$700', d:'Walled in Ryukyuan gusuku stone, low-slung and inward-facing, opening onto the East China Sea. Restraint executed properly.'},
+      {n:'Halekulani Okinawa', a:'≈$600', d:'Onna coast, white-on-white, five pools stepped toward the water. Clean modernist resort planning.'},
+      {n:'Trunk(Hotel) Yoyogi Park, Tokyo', a:'≈$550', d:'Keiji Ashizawa. Small, beautifully detailed, facing the park — the best-designed room in Tokyo at this rate.'},
+      {n:'Design business hotel, Tokyo', a:'$200–260', d:'The sensible half of the split. Book Asakusa or Kuramae, not Ginza.'}
+    ],
+    watch:'Refundable rooms throughout and a spare day either side. Silver Week hits your Tokyo leg — business hotels hold up, resorts do not.'
+  },
+  {
+    id:'greece', name:'Milos or Naxos + Athens', tag:'Europe · Greece', groups:['europe'], air:2,
+    sub:'Cycladic minimalism, over the line',
+    flight:1850, mid:240, design:480, daily:130, extras:800,
+    heat:28, wx:5, arch:5,
+    wxLine:'27–30°C, warmest sea of the year, August crowds gone',
+    note:'September is the ideal month in the Cyclades and the vernacular is exactly your kind of building — whitewashed mass, small openings, everything oriented to the sea. The arithmetic is the problem, not the destination.',
+    stays:[
+      {n:'Skinopi Lodge, Milos', a:'≈$520', d:'Five houses by Greek architects on a bare hillside above the gulf. Stone, concrete and shade structures, nothing surplus. A masterclass in siting.'},
+      {n:'Milos Cove', a:'≈$700', d:'Villas cut into the cliff around a private bay, cave-like interiors opening to full sea views.'},
+      {n:'Nine Muses, Naxos', a:'≈$380', d:'Cycladic vernacular done cleanly, on Agios Prokopios beach.'}
+    ],
+    watch:'Meltemi winds cancel ferries in September. Never sleep on an island the night before a long-haul departure.'
+  },
+  {
+    id:'jp-yaeyama', name:'Ishigaki &amp; the Yaeyama islands', tag:'Japan · far south', groups:['japan','tropical'], air:0,
+    sub:'The best building on this list, and the priciest',
+    flight:1300, mid:250, design:700, daily:120, extras:1300,
+    heat:30, wx:2, arch:5,
+    wxLine:'29°C, subtropical, fully exposed to storms',
+    note:'Closer to Taiwan than to Tokyo. Manta rays, mangrove rivers, and a resort that is essentially a constructed Ryukyuan village. Two domestic flights and a ferry to get there.',
+    stays:[
+      {n:'Hoshinoya Taketomi Island', a:'$1,100–1,300', d:'Forty-eight freestanding villas inside a recreated Ryukyuan hamlet — red pantile roofs, coral-stone walls around each house, sliding walls that open the whole plan to the breeze. No televisions, by design.'},
+      {n:'Iraph Sui, Irabu Island', a:'≈$700', d:'Luxury Collection on a near-empty island, 58 rooms, several with private pools over the reef.'},
+      {n:'Ishigaki beachfront four-star', a:'$230–300', d:'The affordable half — fine, and forgettable.'}
+    ],
+    watch:'Ferries stop before flights do. You can end up stranded on the wrong island with a long-haul departure booked.'
+  },
+  {
+    id:'fiji', name:'Fiji — Mamanucas &amp; Coral Coast', tag:'Pacific', groups:['tropical'], air:0,
+    sub:'Best weather odds, thinnest architecture',
+    flight:550, mid:320, design:560, daily:130, extras:700,
+    heat:28, wx:5, arch:2,
+    wxLine:'Dry season, 26–28°C, low humidity, calm water',
+    note:'Four hours, no jet lag, and September is genuinely its best month. The honest caveat for you: Fijian resorts are built beautifully in the vernacular sense — thatch, timber, volume — but there is very little here that would interest you as design.',
+    stays:[
+      {n:'Six Senses Fiji, Malolo', a:'≈$1,000', d:'Solar-powered, locally quarried stone and timber, the most considered build in the country.'},
+      {n:'Tokoriki Island Resort', a:'≈$600', d:'Adults-only, thatched bures directly on sand, west-facing for sunsets.'},
+      {n:'Coral Coast four-star', a:'$280–350', d:'Mainland, a fraction of island rates, and where the budget actually balances.'}
+    ],
+    watch:'Resort food and drink is the quiet budget killer. Half-board beats à la carte over eleven nights.'
+  },
+  {
+    id:'andalusia', name:'Seville, Granada &amp; Málaga', tag:'Europe · Spain', groups:['europe'], air:2,
+    sub:'The strongest architecture, the tightest budget',
+    flight:1900, mid:190, design:380, daily:120, extras:700,
+    heat:31, wx:5, arch:5,
+    wxLine:'28–33°C, dry, cooling through the month',
+    note:'The Alhambra, the Mezquita, Seville\'s Alcázar — probably the densest run of great buildings you could see in eleven days. It fits, but only just, and only on a split stay.',
+    stays:[
+      {n:'Corral del Rey, Seville', a:'≈$400', d:'A 17th-century casa palacio in Santa Cruz, restored around its courtyard with the original Tuscan columns intact.'},
+      {n:'Hospes Palacio de los Patos, Granada', a:'≈$420', d:'A listed 19th-century palace joined to a sharp contemporary wing in alabaster and glass. The junction between the two is the point.'},
+      {n:'Boutique townhouse, Málaga', a:'$180–240', d:'The affordable half, walking distance from the Picasso and the Roman theatre.'}
+    ],
+    watch:'Alhambra tickets sell out months ahead and there is no workaround. Book them before you book anything else.'
+  },
+  {
+    id:'jp-classic', name:'Tokyo → Kyoto → Osaka', tag:'Japan · classic', groups:['japan'], air:0,
+    sub:'Great buildings, worst possible fortnight',
+    flight:1350, mid:260, design:480, daily:150, extras:700,
+    heat:30, wx:3, arch:5,
+    wxLine:'Warm and humid, 28–31°C, storms possible',
+    note:'Architecturally unbeatable and, for these exact dates, the trip I would argue you out of. You would pay a premium to travel in the most crowded domestic week in eleven years.',
+    stays:[
+      {n:'Ace Hotel Kyoto', a:'≈$500', d:'Kengo Kuma with Commune. The 1926 Kyoto Central Telephone Office wrapped in new timber lattice — the best old-and-new stitch in the city.'},
+      {n:'Hotel Okura Tokyo, Heritage Wing', a:'≈$700', d:'Yoshiro Taniguchi\'s 1962 lobby, faithfully rebuilt. Post-war Japanese modernism at its absolute peak.'},
+      {n:'Trunk(Hotel) Yoyogi Park', a:'≈$550', d:'Keiji Ashizawa, twenty rooms, immaculate detailing over the park.'}
+    ],
+    watch:'Silver Week, 19–23 September, covers your last five nights. Reserve shinkansen seats the day booking opens.'
+  },
+  {
+    id:'balkans', name:'Albania &amp; the Montenegrin coast', tag:'Europe · Adriatic', groups:['europe'], air:2,
+    sub:'Cheapest Europe, thinnest design scene',
+    flight:1850, mid:140, design:260, daily:90, extras:700,
+    heat:28, wx:5, arch:3,
+    wxLine:'26–30°C, swimmable sea, empty beaches',
+    note:'Adriatic water and Ottoman hill towns at Southeast Asian prices. Berat and Gjirokastër are extraordinary as urban fabric — but the hotels themselves are guesthouses, not design objects.',
+    stays:[
+      {n:'Boutique stone house, Gjirokastër', a:'$150–220', d:'Restored Ottoman tower houses with slate roofs and timber galleries. The building is the reason to come.'},
+      {n:'Design villa, Ksamil', a:'$200–280', d:'New-build, sharp, straight onto the water opposite Corfu.'},
+      {n:'Kotor old town apartment', a:'≈$200', d:'Inside the walls, under the mountain.'}
+    ],
+    watch:'Roads are slow and a hire car is essential. Budget real driving time between coast and interior.'
+  },
+  {
+    id:'portugal', name:'Lisbon, Alentejo &amp; the Algarve', tag:'Europe · Portugal', groups:['europe'], air:2,
+    sub:'Best pure architecture trip, longest flight',
+    flight:1950, mid:220, design:400, daily:130, extras:700,
+    heat:27, wx:5, arch:5,
+    wxLine:'25–29°C, dry, Atlantic breeze',
+    note:'Siza, Souto de Moura, the Gulbenkian, azulejo everywhere. If the trip were purely about buildings this would win — but Lisbon is almost the furthest point on earth from Sydney and it just misses the ceiling.',
+    stays:[
+      {n:'Santiago de Alcántara / Alentejo rural hotels', a:'$300–420', d:'Cork-country conversions in whitewashed mass with modern insertions — the current Portuguese house language, done well.'},
+      {n:'Memmo Alfama, Lisbon', a:'≈$380', d:'Cut into the Alfama hillside, red pool terrace over the Tagus rooftops.'},
+      {n:'Lisbon design apartment', a:'$180–240', d:'The affordable half, and a better way to eat.'}
+    ],
+    watch:'26–30 hours door to door each way. Eight full days on the ground out of eleven nights.'
+  },
+  {
+    id:'vietnam-n', name:'Hanoi, Ninh Bình &amp; Hạ Long', tag:'Southeast Asia', groups:[], air:0,
+    sub:'Cheapest way to sleep somewhere remarkable',
+    flight:850, mid:150, design:300, daily:80, extras:700,
+    heat:31, wx:3, arch:4,
+    wxLine:'Humid, 28–32°C, tail of the wet season',
+    note:'Northern Vietnam only — the central coast is in its worst months. Karst scenery as good as anything in Asia, and Bensley\'s Hanoi work is genuinely worth studying.',
+    stays:[
+      {n:'Capella Hanoi', a:'≈$420', d:'Bill Bensley as opera house — maximalist, theatrical, obsessively detailed. The opposite of everything else on this list.'},
+      {n:'Bamboo eco-lodge, Ninh Bình', a:'$180–260', d:'Vo Trong Nghia-influenced bamboo vaults among the karsts and rice paddy.'},
+      {n:'Hanoi Old Quarter boutique', a:'$120–170', d:'French-colonial shophouse conversions, walking distance to everything.'}
+    ],
+    watch:'September still throws storms at the north coast. Don\'t book the bay cruise for your last two days.'
+  },
+  {
+    id:'palawan', name:'Palawan — El Nido &amp; Coron', tag:'Philippines', groups:['tropical'], air:0,
+    sub:'Best water, worst month',
+    flight:900, mid:200, design:400, daily:90, extras:900,
+    heat:30, wx:2, arch:3,
+    wxLine:'Habagat season — rain, swell, cancelled boats',
+    note:'Extraordinary limestone and lagoons at low-season rates. September is the southwest monsoon, which is precisely when the boat tours you came for get called off.',
+    stays:[
+      {n:'Kalinaw Resort, San Vicente', a:'≈$420', d:'Six villas, thatch and hardwood, on an empty fourteen-kilometre beach.'},
+      {n:'Cauayan Resort, El Nido', a:'≈$450', d:'Cliffside cabanas facing Bacuit Bay.'},
+      {n:'El Nido town boutique', a:'$150–200', d:'Basic, close to the boats.'}
+    ],
+    watch:'Boats cancel on swell, not just rain, and the connecting flights are small and weather-sensitive.'
+  },
+  {
+    id:'taiwan', name:'Taipei, Taroko &amp; the east coast', tag:'Northeast Asia', groups:[], air:0,
+    sub:'Cheap, hot, and typhoon-exposed',
+    flight:900, mid:170, design:300, daily:90, extras:500,
+    heat:31, wx:2, arch:3,
+    wxLine:'Hot and humid, 30°C, peak typhoon season',
+    note:'Night markets, hot springs and a marble gorge at two-thirds of Japan\'s daily cost. Same weather gamble as Okinawa, without the resort architecture to justify it.',
+    stays:[
+      {n:'Silks Place Taroko', a:'≈$340', d:'Inside the national park at the gorge mouth — the location does the work.'},
+      {n:'Kimpton Da An, Taipei', a:'≈$300', d:'Sharp, contemporary, in the best-walking district of the city.'},
+      {n:'Taipei boutique', a:'$150–200', d:'Plentiful and good near Zhongshan.'}
+    ],
+    watch:'Typhoons close the east coast highway and the gorge outright. Let Taipei absorb a lost day.'
+  },
+  {
+    id:'newcal', name:'New Caledonia — Nouméa &amp; Isle of Pines', tag:'Pacific', groups:['tropical'], air:0,
+    sub:'One great building, cool for your brief',
+    flight:850, mid:300, design:480, daily:160, extras:900,
+    heat:25, wx:5, arch:4,
+    wxLine:'Dry and mild, 22–26°C — pleasant, not hot',
+    note:'Worth naming for one reason: Renzo Piano\'s Tjibaou Cultural Centre outside Nouméa is among the finest buildings in the Pacific. But at 22–26°C it isn\'t the heat you asked for, and it is the most expensive place per day here.',
+    stays:[
+      {n:'Le Méridien Isle of Pines', a:'≈$520', d:'Oro Bay, on the natural piscine. Position over design.'},
+      {n:'Nouméa self-catering apartment', a:'$220–300', d:'Anse Vata, and a way around French grocery prices.'}
+    ],
+    watch:'Groceries and restaurants cost more than Sydney. Self-cater half the trip or this doesn\'t balance.'
+  },
+  {
+    id:'cooks', name:'Rarotonga &amp; Aitutaki', tag:'Pacific', groups:['tropical'], air:0,
+    sub:'The lagoon, and not much building',
+    flight:1300, mid:300, design:520, daily:130, extras:1100,
+    heat:26, wx:5, arch:2,
+    wxLine:'Dry season, 25–27°C, the best window of the year',
+    note:'Aitutaki\'s lagoon is the postcard and September is its best month. Little architectural interest, warm rather than hot, and the internal flight is priced like an international one.',
+    stays:[
+      {n:'Pacific Resort Aitutaki', a:'≈$650', d:'Above the lagoon on Amuri, timber and thatch, the view doing the heavy lifting.'},
+      {n:'Rarotonga beachfront villa', a:'$260–340', d:'Muri Beach, self-contained, straight onto sand.'}
+    ],
+    watch:'The Raro–Aitutaki hop is the budget killer. Two or three nights there, the rest on Raro.'
+  },
+  {
+    id:'korea', name:'Seoul, Busan &amp; Jeju', tag:'Northeast Asia', groups:[], air:0,
+    sub:'Strong design, wrong temperature',
+    flight:900, mid:200, design:350, daily:120, extras:500,
+    heat:24, wx:5, arch:5,
+    wxLine:'Early autumn, 22–26°C, crisp and dry',
+    note:'Included because the architecture is superb — Jeju alone has Tadao Ando\'s Genius Loci and Glass House, and Seoul is a working laboratory of contemporary practice. But 22–26°C is autumn, not heat.',
+    stays:[
+      {n:'Podo Hotel, Jeju', a:'≈$400', d:'Itami Jun. A roof profiled on the volcanic hills and Jeju\'s thatched vernacular — one of the great small hotels in Asia.'},
+      {n:'Nest Hotel, Incheon', a:'≈$220', d:'Quiet, coastal, immaculately detailed modernism.'},
+      {n:'Seoul boutique, Bukchon', a:'$180–250', d:'Hanok conversions among the old courtyard houses.'}
+    ],
+    watch:'Chuseok falls in late September — check the exact dates before locking any domestic travel.'
+  }
+];
+
+const state = {mode:'split', sig:4, filter:'all', sort:'total', nights:11, travellers:2, buffer:true, ceiling:10000};
+const money = n => '$' + Math.round(n).toLocaleString('en-AU');
+
+function cost(d){
+  const air = d.air || 0;
+  const stayNights = Math.max(1, state.nights - air);
+  const days = Math.max(1, state.nights + 1 - air);
+  let stay;
+  if (state.mode === 'simple')      stay = d.mid * stayNights;
+  else if (state.mode === 'design') stay = d.design * stayNights;
+  else { const s = Math.min(state.sig, stayNights); stay = d.design * s + d.mid * (stayNights - s); }
+  const flights = d.flight * state.travellers;
+  const ground  = d.daily * state.travellers * days;
+  const extras  = d.extras * (state.travellers / 2);
+  const core = flights + stay + ground + extras;
+  let insurance = 0, contingency = 0;
+  if (state.buffer){ insurance = 90 * state.travellers; contingency = core * 0.10; }
+  return {flights, stay, ground, other: extras + insurance + contingency, days,
+          total: core + insurance + contingency};
+}
+
+function visible(){
+  let list = DEST.map(d => ({...d, c: cost(d)}));
+  if (state.filter === 'hot')    list = list.filter(d => d.heat >= 28);
+  if (state.filter === 'japan')  list = list.filter(d => d.groups.includes('japan'));
+  if (state.filter === 'europe') list = list.filter(d => d.groups.includes('europe'));
+  if (state.filter === 'fits')   list = list.filter(d => d.c.total <= state.ceiling);
+  if (state.sort === 'design')     list.sort((a,b) => (b.arch - a.arch) || (a.c.total - b.c.total));
+  else if (state.sort === 'heat')  list.sort((a,b) => (b.heat - a.heat) || (a.c.total - b.c.total));
+  else                             list.sort((a,b) => a.c.total - b.c.total);
+  return list;
+}
+
+function renderRail(list){
+  const rail = document.getElementById('rail');
+  if (!list.length){ rail.innerHTML = '<p class="empty">Nothing matches that combination. Loosen the filter or drop back to good rooms.</p>'; return; }
+  const max = Math.max(state.ceiling * 1.3, ...list.map(d => d.c.total * 1.06));
+  const pct = v => (v / max * 100);
+  const p = (pct(state.ceiling) / 100).toFixed(4);
+  rail.innerHTML = `
+    <div class="overzone" style="--p:${p}"></div>
+    <div class="ceiling" data-label="${money(state.ceiling)}" style="--p:${p}"></div>
+    ${list.map(d => {
+      const c = d.c, over = c.total > state.ceiling;
+      return `<div class="row" data-jump="${d.id}" tabindex="0" role="button">
+        <div class="rname">${d.name}<small>${d.tag}</small></div>
+        <div class="bar">
+          <i style="width:${pct(c.flights)}%;background:var(--c-fly)"></i>
+          <i style="width:${pct(c.stay)}%;background:var(--c-stay)"></i>
+          <i style="width:${pct(c.ground)}%;background:var(--c-day)"></i>
+          <i style="width:${pct(c.other)}%;background:var(--c-extra)"></i>
+        </div>
+        <div class="rtotal ${over?'over':'under'}">${money(c.total)}</div>
+      </div>`;
+    }).join('')}`;
+  rail.querySelectorAll('.row').forEach(r => {
+    const go = () => { const el = document.getElementById('card-' + r.dataset.jump);
+      if (el) el.scrollIntoView({behavior:'smooth', block:'center'}); };
+    r.addEventListener('click', go);
+    r.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
+  });
+}
+
+function renderCards(list){
+  const grid = document.getElementById('grid');
+  if (!list.length){ grid.innerHTML = ''; return; }
+  const maxTotal = Math.max(...list.map(d => d.c.total));
+  grid.innerHTML = list.map(d => {
+    const c = d.c, over = c.total > state.ceiling, gap = Math.abs(c.total - state.ceiling);
+    const colour = k => k==='Flights'?'var(--c-fly)':k==='Rooms'?'var(--c-stay)':k==='Daily'?'var(--c-day)':'var(--c-extra)';
+    const meter = (k,v) => `<div class="meter"><b>${k}</b>
+      <span class="track"><i style="width:${(v/maxTotal*100).toFixed(1)}%;background:${colour(k)}"></i></span>
+      <em>${money(v)}</em></div>`;
+    const pips = (score, warnLow) => [1,2,3,4,5].map(n =>
+      `<i class="pip ${n<=score ? (warnLow && score<=2 ? 'warn' : (warnLow?'on':'gold')) : ''}"></i>`).join('');
+    const nightsNote = state.mode==='split' ? ` · ${Math.min(state.sig, state.nights-(d.air||0))} signature nights`
+                     : state.mode==='design' ? ' · design every night' : ' · good rooms throughout';
+    return `<article class="card ${over?'flag-over':'flag-under'}" id="card-${d.id}">
+      <p class="ctag">${d.tag}</p>
+      <h3>${d.name}</h3>
+      <p class="sub">${d.sub}</p>
+      <p class="big ${over?'over':'under'}">${money(c.total)}</p>
+      <p class="delta">${over ? money(gap)+' over the ceiling' : money(gap)+' left over'}${nightsNote}${d.air?' · '+c.days+' days on the ground':''}</p>
+      <div class="dials">
+        <div class="dial"><b>Architecture</b><span class="pips">${pips(d.arch,false)}</span></div>
+        <div class="dial"><b>Weather odds</b><span class="pips">${pips(d.wx,true)}</span></div>
+        <div class="dial"><b>Daytime</b><em>${d.heat}°C</em></div>
+      </div>
+      <p class="wxline">${d.wxLine}</p>
+      <p class="note">${d.note}</p>
+      <div class="stays"><h4>Where you'd stay</h4>
+        ${d.stays.map(s => `<div class="stay"><strong>${s.n}</strong><span>${s.a}</span><p>${s.d}</p></div>`).join('')}
+      </div>
+      <div class="meters">
+        ${meter('Flights', c.flights)}${meter('Rooms', c.stay)}${meter('Daily', c.ground)}${meter('Extras', c.other)}
+      </div>
+      <p class="watch">${d.watch}</p>
+    </article>`;
+  }).join('');
+}
+
+function render(){
+  document.getElementById('sigOut').textContent = state.sig;
+  const list = visible();
+  renderRail(list); renderCards(list);
+}
+
+function wireSeg(id, key){
+  document.getElementById(id).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    [...e.currentTarget.children].forEach(x => x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+    state[key] = b.dataset.mode || b.dataset.filter || b.dataset.sort;
+    render();
+  });
+}
+wireSeg('segMode','mode'); wireSeg('segFilter','filter'); wireSeg('segSort','sort');
+document.getElementById('stepSig').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  state.sig = Math.max(1, Math.min(state.nights, state.sig + Number(b.dataset.n)));
+  if (state.mode !== 'split'){
+    state.mode = 'split';
+    const seg = document.getElementById('segMode');
+    [...seg.children].forEach(x => x.setAttribute('aria-pressed', x.dataset.mode==='split' ? 'true':'false'));
+  }
+  render();
+});
+document.getElementById('buffer').addEventListener('change', e => { state.buffer = e.target.checked; render(); });
+render();
+</script>
+</body>
+</html>
