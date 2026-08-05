@@ -181,6 +181,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
         <button data-filter="hot" aria-pressed="false">28°C+</button>
         <button data-filter="japan" aria-pressed="false">Japan</button>
         <button data-filter="europe" aria-pressed="false">Europe</button>
+        <button data-filter="americas" aria-pressed="false">Americas</button>
         <button data-filter="fits" aria-pressed="false">Fits</button>
       </div>
     </div>
@@ -461,6 +462,49 @@ const DEST = [
       {n:'Seoul boutique, Bukchon', a:'$180–250', d:'Hanok conversions among the old courtyard houses.'}
     ],
     watch:'Chuseok falls in late September — check the exact dates before locking any domestic travel.'
+  },
+  {
+    id:'chile', name:'Santiago, Valparaíso &amp; Atacama', tag:'South America · Chile', groups:['americas'], air:1,
+    sub:'Closest South America gets, still short',
+    flight:1700, mid:200, design:420, daily:130, extras:1100,
+    heat:24, wx:4, arch:4,
+    wxLine:'Early spring, 10–18°C in the cities, 24°C and dry in the desert',
+    note:'Santiago is only 12.5 hours direct, which makes Chile the most reachable part of the continent. But September is early spring in the southern hemisphere — you would be swapping Sydney\'s season for the same one, and the numbers still land over.',
+    stays:[
+      {n:'Tierra Atacama, San Pedro', a:'≈$900', d:'Adobe, local stone and weathered timber by González and Searle, low against the altiplano. Full board, and one of the best-sited hotels in South America.'},
+      {n:'Explora Atacama', a:'≈$1,000', d:'The original explora template — inward-looking courtyards, all excursions included.'},
+      {n:'Casa Higueras, Valparaíso', a:'≈$300', d:'A 1920s house terraced down Cerro Alegre with the whole bay in front of it.'},
+      {n:'Lastarria boutique, Santiago', a:'$180–240', d:'The affordable half, walkable to the good museums.'}
+    ],
+    watch:'Fiestas Patrias falls on 18 September — the biggest national holiday of the year. Transport and rooms book out and much of Santiago closes.'
+  },
+  {
+    id:'brazil', name:'Rio &amp; São Paulo', tag:'South America · Brazil', groups:['americas'], air:2,
+    sub:'The architecture pilgrimage, well over budget',
+    flight:2500, mid:240, design:450, daily:140, extras:900,
+    heat:26, wx:4, arch:5,
+    wxLine:'Early spring, 24–27°C in Rio, warming through the month',
+    note:'Purely on buildings this would beat everything else here — Niemeyer\'s MAC Niterói, and Lina Bo Bardi\'s MASP and SESC Pompéia in São Paulo, which is arguably the most important building of the last century that most architects never see. The flight is what kills it.',
+    stays:[
+      {n:'Rosewood São Paulo', a:'≈$950', d:'Jean Nouvel and Philippe Starck inside the restored Matarazzo maternity hospital. A vertical garden tower beside a 1920s shell.'},
+      {n:'Hotel Emiliano, Rio', a:'≈$700', d:'Arthur Casas on Copacabana — brise-soleil facade, rooftop pool, immaculate Brazilian modernist detailing.'},
+      {n:'Santa Teresa boutique, Rio', a:'$260–340', d:'Restored colonial houses on the hill, above the noise.'}
+    ],
+    watch:'Roughly 30 hours each way via Santiago or Auckland. Nine days on the ground, and about $5,000 of the budget gone on seats.'
+  },
+  {
+    id:'canada', name:'Vancouver, Whistler &amp; the Rockies', tag:'North America · Canada', groups:['americas'], air:1,
+    sub:'Wrong season, wrong budget',
+    flight:1950, mid:280, design:480, daily:180, extras:1400,
+    heat:18, wx:4, arch:4,
+    wxLine:'Early autumn, 15–20°C, first snow possible in the Rockies',
+    note:'Priced for completeness. September in British Columbia is beautiful — larches turning, quiet trails — but it is 15–20°C, not heat, and Canada is one of the most expensive countries on this list once you add a hire car and eleven days of eating.',
+    stays:[
+      {n:'Wickaninnish Inn, Tofino', a:'≈$800', d:'Timber and glass driven into the rock above Chesterman Beach, built for watching Pacific storms.'},
+      {n:'Nita Lake Lodge, Whistler', a:'≈$450', d:'Lakeside, heavy timber, next to the old rail line.'},
+      {n:'Vancouver design hotel', a:'$300–400', d:'Gastown or Yaletown, walkable to everything worth seeing.'}
+    ],
+    watch:'A hire car is unavoidable for the Rockies, adding around $1,400 over eleven days before fuel.'
   }
 ];
 
@@ -490,6 +534,7 @@ function visible(){
   if (state.filter === 'hot')    list = list.filter(d => d.heat >= 28);
   if (state.filter === 'japan')  list = list.filter(d => d.groups.includes('japan'));
   if (state.filter === 'europe') list = list.filter(d => d.groups.includes('europe'));
+  if (state.filter === 'americas') list = list.filter(d => d.groups.includes('americas'));
   if (state.filter === 'fits')   list = list.filter(d => d.c.total <= state.ceiling);
   if (state.sort === 'design')     list.sort((a,b) => (b.arch - a.arch) || (a.c.total - b.c.total));
   else if (state.sort === 'heat')  list.sort((a,b) => (b.heat - a.heat) || (a.c.total - b.c.total));
