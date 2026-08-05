@@ -3,24 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12–23 September · Heat, scenery, and rooms worth waking up in</title>
+<title>Pascal &amp; Ale · September 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0C1F33;--line:rgba(239,230,214,.16);--sand:#EFE6D6;--sand-dim:#9FA7B4;
-  --gold:#E9B44C;--coral:#E2564D;--aqua:#57A9B8;
+  --text-2:#CFC9BC;
+  --gold:#E9B44C;--coral:#E2564D;--aqua:#57A9B8;--chip-fg:#0C1F33;
   --c-fly:#57A9B8;--c-stay:#E9B44C;--c-day:#8C9EC9;--c-extra:#C4736B;
+  --surf-1:rgba(255,255,255,.035);--surf-2:rgba(255,255,255,.014);
+  --surf-3:rgba(255,255,255,.04);--surf-4:rgba(255,255,255,.06);--surf-5:rgba(255,255,255,.13);
+  --panel:rgba(12,31,51,.94);
+  --glow-a:rgba(87,169,184,.16);--glow-b:rgba(233,180,76,.09);
+  --tint-gold:rgba(233,180,76,.05);--tint-aqua:rgba(87,169,184,.05);
   --display:'Bricolage Grotesque','Instrument Sans',system-ui,sans-serif;
   --body:'Instrument Sans',system-ui,-apple-system,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
 }
+[data-theme="light"]{
+  --ink:#EDEAE2;--line:rgba(16,35,58,.18);--sand:#122740;--sand-dim:#5F6C7D;
+  --text-2:#3B4859;
+  --gold:#A8760C;--coral:#BE342B;--aqua:#256B79;--chip-fg:#FFFFFF;
+  --c-fly:#3E8698;--c-stay:#C08F1E;--c-day:#5D71A2;--c-extra:#A2564E;
+  --surf-1:rgba(16,35,58,.035);--surf-2:rgba(16,35,58,.015);
+  --surf-3:rgba(16,35,58,.055);--surf-4:rgba(16,35,58,.075);--surf-5:rgba(16,35,58,.15);
+  --panel:rgba(237,234,226,.94);
+  --glow-a:rgba(37,107,121,.10);--glow-b:rgba(168,118,12,.08);
+  --tint-gold:rgba(168,118,12,.06);--tint-aqua:rgba(37,107,121,.06);
+}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--ink);color:var(--sand);font-family:var(--body);font-size:16px;line-height:1.5;
-  background-image:radial-gradient(120% 80% at 88% -10%,rgba(87,169,184,.16),transparent 60%),
-                   radial-gradient(90% 70% at 0% 0%,rgba(233,180,76,.09),transparent 55%);
+  background-image:radial-gradient(120% 80% at 88% -10%,var(--glow-a),transparent 60%),
+                   radial-gradient(90% 70% at 0% 0%,var(--glow-b),transparent 55%);
+  transition:background-color .25s,color .25s;
   background-attachment:fixed}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 header{padding:56px 0 30px}
@@ -28,14 +46,14 @@ header{padding:56px 0 30px}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.8rem);line-height:.94;
   letter-spacing:-.035em;margin:.28em 0 .18em;max-width:17ch}
 h1 em{font-style:normal;color:var(--gold)}
-.standfirst{max-width:60ch;color:#CFC9BC;font-size:1.03rem}
+.standfirst{max-width:60ch;color:var(--text-2);font-size:1.03rem}
 .spec{display:flex;flex-wrap:wrap;margin-top:30px;border:1px solid var(--line);border-radius:3px;
-  overflow:hidden;background:rgba(255,255,255,.02)}
+  overflow:hidden;background:var(--surf-2)}
 .spec div{flex:1 1 130px;padding:13px 16px;border-right:1px solid var(--line)}
 .spec div:last-child{border-right:0}
 .spec dt{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-dim);margin:0 0 5px}
 .spec dd{margin:0;font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em}
-.panel{position:sticky;top:0;z-index:30;margin-top:34px;background:rgba(12,31,51,.94);
+.panel{position:sticky;top:0;z-index:30;margin-top:34px;background:var(--panel);
   backdrop-filter:blur(14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .panel .wrap{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:flex-end;padding-top:14px;padding-bottom:14px}
 .ctl{display:flex;flex-direction:column;gap:6px}
@@ -46,13 +64,13 @@ h1 em{font-style:normal;color:var(--gold)}
   transition:background .18s,color .18s;white-space:nowrap}
 .seg button:last-child{border-right:0}
 .seg button:hover{color:var(--sand)}
-.seg button[aria-pressed="true"]{background:var(--gold);color:var(--ink);font-weight:600}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--chip-fg);font-weight:600}
 .stepper{display:flex;align-items:center;gap:4px;border:1px solid var(--line);border-radius:2px;padding:3px}
-.stepper button{appearance:none;border:0;background:rgba(255,255,255,.05);color:var(--sand);width:26px;
+.stepper button{appearance:none;border:0;background:var(--surf-4);color:var(--sand);width:26px;
   height:26px;border-radius:2px;cursor:pointer;font-size:15px;line-height:1;font-family:var(--mono)}
-.stepper button:hover{background:var(--gold);color:var(--ink)}
+.stepper button:hover{background:var(--gold);color:var(--chip-fg)}
 .stepper span{font-family:var(--mono);font-size:.86rem;min-width:46px;text-align:center}
-.check{display:flex;align-items:center;gap:8px;font-size:.84rem;color:#CFC9BC;cursor:pointer;padding-bottom:7px}
+.check{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--text-2);cursor:pointer;padding-bottom:7px}
 .check input{accent-color:var(--gold);width:16px;height:16px}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:54px 0 6px}
 h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.025em;margin:0}
@@ -61,30 +79,44 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
   letter-spacing:.06em;color:var(--sand-dim)}
 .legend span{display:flex;align-items:center;gap:6px}
 .swatch{width:11px;height:11px;border-radius:1px;display:block}
-.rail{position:relative;border-top:1px solid var(--line);--bl:190px;--br:110px}
+.rail{position:relative;border-top:1px solid var(--line);--bl:234px;--br:110px}
 .ceiling{position:absolute;top:0;bottom:0;width:1px;background:var(--coral);z-index:5;pointer-events:none;
   left:calc(var(--bl) + (100% - var(--bl) - var(--br)) * var(--p))}
 .ceiling::after{content:attr(data-label);position:absolute;top:-21px;left:0;transform:translateX(-50%);
   font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--coral);white-space:nowrap}
 .overzone{position:absolute;top:0;bottom:0;z-index:1;pointer-events:none;
   left:calc(var(--bl) + (100% - var(--bl) - var(--br)) * var(--p));right:var(--br);
-  background:repeating-linear-gradient(135deg,rgba(226,86,77,.11) 0 5px,transparent 5px 10px)}
-.row{position:relative;z-index:3;display:grid;grid-template-columns:176px 1fr 96px;align-items:center;
+  background:repeating-linear-gradient(135deg,color-mix(in srgb, var(--coral) 14%, transparent) 0 5px,transparent 5px 10px)}
+.row{position:relative;z-index:3;display:grid;grid-template-columns:30px 176px 1fr 96px;align-items:center;
   gap:14px;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer}
 .row:hover .rname{color:var(--gold)}
+.rord{font-family:var(--mono);font-size:.78rem;color:var(--sand-dim);text-align:right;font-weight:500}
+.row:hover .rord{color:var(--gold)}
 .rname{font-size:.85rem;font-weight:500;letter-spacing:-.01em;transition:color .18s;line-height:1.25}
 .rname small{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--sand-dim);margin-top:2px}
-.bar{display:flex;height:19px;border-radius:1px;overflow:hidden;background:rgba(255,255,255,.04)}
+.bar{display:flex;height:19px;border-radius:1px;overflow:hidden;background:var(--surf-3)}
 .bar i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.8,.25,1)}
 .rtotal{font-family:var(--mono);font-size:.81rem;text-align:right;font-weight:500}
 .rtotal.over{color:var(--coral)}
 .rtotal.under{color:var(--gold)}
+.rubric{border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:3px;
+  padding:20px 22px;margin-top:22px;background:var(--tint-aqua)}
+.rubric h3{font-family:var(--display);font-weight:700;font-size:1.06rem;margin:0 0 8px;letter-spacing:-.02em}
+.rubric > p{margin:0 0 16px;font-size:.87rem;color:var(--text-2);max-width:70ch}
+.rubric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.rubric-grid h5{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin:0 0 6px;font-weight:600}
+.rubric-grid h5 i{font-style:normal;color:var(--sand-dim);font-weight:400;letter-spacing:0}
+.rubric-grid p{margin:0;font-size:.83rem;color:var(--text-2);line-height:1.5}
+.rubric-note{margin:16px 0 0!important;font-size:.81rem!important;color:var(--sand-dim)!important;
+  padding-top:13px;border-top:1px solid var(--line)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;margin-top:26px}
 .card{border:1px solid var(--line);border-radius:4px;padding:20px;display:flex;flex-direction:column;
-  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  transition:border-color .2s,transform .2s,background .25s;
+  background:linear-gradient(180deg,var(--surf-1),var(--surf-2));
   transition:border-color .2s,transform .2s}
-.card:hover{border-color:rgba(233,180,76,.42);transform:translateY(-2px)}
+.card:hover{border-color:color-mix(in srgb, var(--gold) 55%, transparent);transform:translateY(-2px)}
 .card.flag-over{border-left:2px solid var(--coral)}
 .card.flag-under{border-left:2px solid var(--gold)}
 .ctag{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua)}
@@ -94,20 +126,35 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .big.over{color:var(--coral)}
 .big.under{color:var(--gold)}
 .delta{font-family:var(--mono);font-size:.71rem;color:var(--sand-dim);margin-top:5px;line-height:1.5}
-.dials{display:flex;gap:22px;margin:16px 0 14px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.dial{flex:1}
-.dial b{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--sand-dim);margin-bottom:6px}
-.pips{display:flex;gap:3px}
-.pip{width:100%;max-width:17px;height:4px;border-radius:2px;background:rgba(255,255,255,.13)}
+.dials{display:grid;grid-template-columns:1fr 1fr;gap:15px 18px;margin:16px 0 14px;padding:13px 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dial b{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;font-weight:400;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--sand-dim);margin-bottom:6px}
+.rank{font-style:normal;background:var(--gold);color:var(--chip-fg);font-weight:700;letter-spacing:0;
+  padding:1px 5px;border-radius:2px;font-size:9px;font-family:var(--mono)}
+.rank.inline{background:transparent;color:var(--sand-dim);font-weight:400;font-size:.6rem;
+  letter-spacing:.1em;text-transform:uppercase;padding:0;margin-left:6px;vertical-align:middle}
+.score{font-style:normal;display:block;font-family:var(--mono);font-size:1.35rem;font-weight:700;
+  letter-spacing:-.03em;line-height:1;color:var(--gold)}
+.score.small{font-size:1.05rem;color:var(--sand)}
+.score i{font-style:normal;font-size:.62em;font-weight:400;color:var(--sand-dim);margin-left:1px}
+.subs{display:flex;gap:10px;margin-top:7px}
+.sub-score{font-family:var(--mono);font-size:9.5px;color:var(--sand);display:flex;gap:4px}
+.sub-score b{display:inline;margin:0;font-size:9.5px;color:var(--sand-dim)}
+.pips{display:flex;gap:3px;margin-top:7px}
+.pip{width:100%;max-width:17px;height:4px;border-radius:2px;background:var(--surf-5)}
 .pip.on{background:var(--aqua)}
 .pip.warn{background:var(--coral)}
 .pip.gold{background:var(--gold)}
-.dial em{font-style:normal;font-family:var(--mono);font-size:.78rem;color:var(--sand)}
-.wxline{font-size:.78rem;color:#CFC9BC;margin:0 0 13px}
+.wxline{font-size:.78rem;color:var(--text-2);margin:0 0 13px}
 .stays{margin:0 0 14px;border-top:1px dashed var(--line);padding-top:12px}
 .stays h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold);margin:0 0 9px;font-weight:500}
+.spots h4{color:var(--aqua)}
+.tours h4{color:var(--c-day)}
+.tours .stay{margin-bottom:6px}
+.tours .stay span{color:var(--c-day)}
+.spots .stay{grid-template-columns:1fr}
 .stay{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin-bottom:9px}
 .stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em}
 .stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap}
@@ -116,15 +163,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .meter{display:grid;grid-template-columns:64px 1fr 62px;align-items:center;gap:9px;font-family:var(--mono);
   font-size:9.5px;color:var(--sand-dim)}
 .meter b{font-weight:400;text-transform:uppercase;letter-spacing:.1em}
-.track{height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden}
+.track{height:5px;background:var(--surf-4);border-radius:3px;overflow:hidden}
 .track i{display:block;height:100%;transition:width .5s cubic-bezier(.2,.8,.25,1)}
 .meter em{font-style:normal;text-align:right;color:var(--sand)}
-.card p.note{font-size:.85rem;color:#CFC9BC;margin:0 0 12px;line-height:1.48}
-.watch{font-size:.79rem;color:var(--coral);border-left:2px solid rgba(226,86,77,.5);padding:2px 0 2px 10px;margin-top:auto}
+.card p.note{font-size:.85rem;color:var(--text-2);margin:0 0 12px;line-height:1.48}
+.watch{font-size:.79rem;color:var(--coral);border-left:2px solid color-mix(in srgb, var(--coral) 55%, transparent);padding:2px 0 2px 10px;margin-top:auto}
 .callout{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:3px;padding:22px 24px;
-  margin:44px 0 0;background:rgba(233,180,76,.05)}
+  margin:44px 0 0;background:var(--tint-gold)}
 .callout h3{font-family:var(--display);font-weight:700;font-size:1.12rem;margin:0 0 9px;letter-spacing:-.02em}
-.callout p{margin:0 0 10px;font-size:.92rem;color:#CFC9BC}
+.callout p{margin:0 0 10px;font-size:.92rem;color:var(--text-2)}
 .callout p:last-child{margin-bottom:0}
 footer{margin:64px 0 70px;padding-top:26px;border-top:1px solid var(--line);font-size:.79rem;color:var(--sand-dim)}
 footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);
@@ -133,8 +180,10 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
 .empty{padding:40px 0;color:var(--sand-dim);font-size:.9rem}
 @media (max-width:720px){
   .rail{--bl:0px;--br:0px}
-  .row{grid-template-columns:1fr;gap:7px;padding:13px 0}
-  .rtotal{text-align:left}
+  .row{grid-template-columns:26px 1fr;gap:6px 10px;padding:13px 0}
+  .rord{text-align:left}
+  .row .bar{grid-column:1/-1}
+  .rtotal{text-align:left;grid-column:1/-1}
   header{padding-top:38px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -144,15 +193,15 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
 <body>
 
 <header class="wrap">
-  <p class="eyebrow">Sydney · 12–23 September 2026 · 2 travellers · 11 nights</p>
-  <h1>Hot, scenic, and a room <em>worth the detour.</em></h1>
-  <p class="standfirst">A room that's actually designed costs about double a merely good one. So the question isn't where you can afford to go — it's how many nights of real architecture $10,000 buys once the flights are paid for. Switch strategies below and watch the answer change.</p>
+  <p class="eyebrow">Pascal &amp; Ale · departing Sydney · 12–23 September 2026</p>
+  <h1>Somewhere hot, with a view, and a room <em>worth waking up in.</em></h1>
+  <p class="standfirst">Eleven nights, the two of you, and $10,000. A room that's actually designed costs about double a merely good one, so the real question isn't where you can afford to go — it's how many nights of proper architecture the budget buys once the flights are paid for. Switch strategies below and watch the answer move.</p>
   <dl class="spec">
     <div><dt>Departs</dt><dd>Sat 12 Sep</dd></div>
     <div><dt>Returns</dt><dd>Wed 23 Sep</dd></div>
     <div><dt>Ceiling</dt><dd>$10,000</dd></div>
     <div><dt>Currency</dt><dd>AUD, both people</dd></div>
-    <div><dt>Wanted</dt><dd>Heat, views, design</dd></div>
+    <div><dt>Non-negotiable</dt><dd>Heat, views, design</dd></div>
   </dl>
 </header>
 
@@ -163,7 +212,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
       <div class="seg" role="group" aria-labelledby="lblMode" id="segMode">
         <button data-mode="simple" aria-pressed="false">Good rooms</button>
         <button data-mode="split" aria-pressed="true">Split stay</button>
-        <button data-mode="design" aria-pressed="false">Design every night</button>
+        <button data-mode="design" aria-pressed="false">Comfort every night</button>
       </div>
     </div>
     <div class="ctl">
@@ -182,6 +231,8 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
         <button data-filter="japan" aria-pressed="false">Japan</button>
         <button data-filter="europe" aria-pressed="false">Europe</button>
         <button data-filter="americas" aria-pressed="false">Americas</button>
+        <button data-filter="scenery" aria-pressed="false">Big landscape</button>
+        <button data-filter="offradar" aria-pressed="false">Off-radar</button>
         <button data-filter="fits" aria-pressed="false">Fits</button>
       </div>
     </div>
@@ -190,10 +241,18 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
       <div class="seg" role="group" aria-labelledby="lblSort" id="segSort">
         <button data-sort="total" aria-pressed="true">Cost</button>
         <button data-sort="design" aria-pressed="false">Architecture</button>
+        <button data-sort="land" aria-pressed="false">Doing</button>
         <button data-sort="heat" aria-pressed="false">Heat</button>
       </div>
     </div>
     <label class="check"><input type="checkbox" id="buffer" checked> Insurance + 10% contingency</label>
+    <div class="ctl">
+      <label id="lblTheme">Appearance</label>
+      <div class="seg" role="group" aria-labelledby="lblTheme" id="segTheme">
+        <button data-theme="dark" aria-pressed="true">Dark</button>
+        <button data-theme="light" aria-pressed="false">Light</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -201,7 +260,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
 
   <div class="section-head">
     <h2>Against the ceiling</h2>
-    <p>Bars crossing the red line need trimming. Tap one to jump to the rooms.</p>
+    <p>Numbered by whichever order you've chosen. Bars crossing the red line need trimming — tap one to jump to the rooms.</p>
   </div>
   <div class="legend">
     <span><i class="swatch" style="background:var(--c-fly)"></i> Flights</span>
@@ -212,22 +271,107 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
   <div class="rail" id="rail"></div>
 
   <div class="section-head" style="margin-top:62px">
-    <h2>The rooms, and what they cost</h2>
-    <p>Nightly rates are for two, typical September, before any deal. Architecture and heat are scored one to five.</p>
+    <h2>The rooms, and what's around them</h2>
+    <p>Room rates and activity prices are both for two. Rooms are chosen for material honesty over polish — no marble lobbies, no butlers. Activity prices are indicative and already sit inside the Extras line.</p>
+  </div>
+
+  <div class="rubric">
+    <h3>How the two scores work</h3>
+    <p>Six judgements, each out of ten, in two groups of three. Every rank on this page — cost, architecture, landscape and heat — is against all nineteen destinations, not just the ones currently showing.</p>
+    <div class="rubric-grid">
+      <div><h5>Stay <i>/10 · architecture</i></h5><p>Can you sleep in a building worth studying, at a rate this budget survives? A great hotel you can't afford scores low.</p></div>
+      <div><h5>Visit <i>/10 · architecture</i></h5><p>Density and quality of buildings you can reach on foot or in a day, weighted toward things that repay a second look.</p></div>
+      <div><h5>Fabric <i>/10 · architecture</i></h5><p>The everyday built environment — streets, housing, vernacular. What you'd notice walking to breakfast.</p></div>
+      <div><h5>Scenery <i>/10 · landscape</i></h5><p>The raw drama of the land and water. Karst, cliff, reef, desert, gorge — how much the place does before anyone builds anything.</p></div>
+      <div><h5>Doing <i>/10 · landscape</i></h5><p>Walks, dives, drives, swims, climbs. Whether there is a reason to get up early beyond photographing something.</p></div>
+      <div><h5>Off-radar <i>/10 · landscape</i></h5><p>How much of it is still quiet. High scores mean the good spots aren't already saturated; low scores mean you'll be sharing them.</p></div>
+    </div>
+    <p class="rubric-note">These are my judgements, not an index. Where two destinations tie, the cheaper one ranks first. Filters: <strong>Big landscape</strong> shows scenery of 8 or more, <strong>Off-radar</strong> shows 7 or more.</p>
+  </div>
+    </div>
+    <div class="ctl">
+      <label for="stepSig">Signature nights</label>
+      <div class="stepper" id="stepSig">
+        <button type="button" data-n="-1" aria-label="One signature night fewer">−</button>
+        <span id="sigOut">4</span>
+        <button type="button" data-n="1" aria-label="One signature night more">+</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label id="lblFilter">Show</label>
+      <div class="seg" role="group" aria-labelledby="lblFilter" id="segFilter">
+        <button data-filter="all" aria-pressed="true">All</button>
+        <button data-filter="hot" aria-pressed="false">28°C+</button>
+        <button data-filter="japan" aria-pressed="false">Japan</button>
+        <button data-filter="europe" aria-pressed="false">Europe</button>
+        <button data-filter="americas" aria-pressed="false">Americas</button>
+        <button data-filter="scenery" aria-pressed="false">Big landscape</button>
+        <button data-filter="offradar" aria-pressed="false">Off-radar</button>
+        <button data-filter="fits" aria-pressed="false">Fits</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label id="lblSort">Order by</label>
+      <div class="seg" role="group" aria-labelledby="lblSort" id="segSort">
+        <button data-sort="total" aria-pressed="true">Cost</button>
+        <button data-sort="design" aria-pressed="false">Architecture</button>
+        <button data-sort="land" aria-pressed="false">Doing</button>
+        <button data-sort="heat" aria-pressed="false">Heat</button>
+      </div>
+    </div>
+    <label class="check"><input type="checkbox" id="buffer" checked> Insurance + 10% contingency</label>
+    <div class="ctl">
+      <label id="lblTheme">Appearance</label>
+      <div class="seg" role="group" aria-labelledby="lblTheme" id="segTheme">
+        <button data-theme="dark" aria-pressed="true">Dark</button>
+        <button data-theme="light" aria-pressed="false">Light</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="section-head">
+    <h2>Against the ceiling</h2>
+    <p>Numbered by whichever order you've chosen. Bars crossing the red line need trimming — tap one to jump to the rooms.</p>
+  </div>
+  <div class="legend">
+    <span><i class="swatch" style="background:var(--c-fly)"></i> Flights</span>
+    <span><i class="swatch" style="background:var(--c-stay)"></i> Rooms</span>
+    <span><i class="swatch" style="background:var(--c-day)"></i> Food &amp; daily life</span>
+    <span><i class="swatch" style="background:var(--c-extra)"></i> Transfers, activities, buffer</span>
+  </div>
+  <div class="rail" id="rail"></div>
+
+  <div class="section-head" style="margin-top:62px">
+    <h2>The rooms, and what's around them</h2>
+    <p>Room rates and activity prices are both for two. Rooms are chosen for material honesty over polish — no marble lobbies, no butlers. Activity prices are indicative and already sit inside the Extras line.</p>
+  </div>
+
+  <div class="rubric">
+    <h3>How the architecture score works</h3>
+    <p>Three judgements, each out of ten, added to a score out of thirty. Every rank on this page — cost, architecture and heat — is against all nineteen destinations, not just the ones currently showing.</p>
+    <div class="rubric-grid">
+      <div><h5>Stay <i>/10</i></h5><p>Can you actually sleep in a building worth studying, at a rate this budget survives? A great hotel you can't afford scores low. Bali tops this because WOHA and Ibuku are reachable; Japan loses points because the Okura and Hoshinoya are not.</p></div>
+      <div><h5>Visit <i>/10</i></h5><p>Density and quality of buildings you can reach on foot or in a day, weighted toward things that repay a second look rather than things you photograph once. The Alhambra, the Süleymaniye and SESC Pompéia all score at the top here.</p></div>
+      <div><h5>Fabric <i>/10</i></h5><p>The everyday built environment — streets, housing, vernacular, how a place is put together when nobody is trying to impress you. This is what you'd notice walking to breakfast, and it's why İstanbul and Kyoto score where they do.</p></div>
+    </div>
+    <p class="rubric-note">These are my judgements, not an index. Where two destinations tie, the cheaper one ranks first — which is the only reason Türkiye sits above Tokyo–Kyoto–Osaka at 28 apiece.</p>
   </div>
   <div class="grid" id="grid"></div>
 
   <div class="callout">
     <h3>The one number that decides this trip</h3>
     <p><strong>A design-led room runs roughly double an ordinary good one</strong> — around $400–500 a night against $200–250 in most of these places, and more in Japan. Over eleven nights that difference is about $2,500, which is a quarter of the entire budget. Nowhere with an expensive flight survives paying it every night.</p>
-    <p><strong>Which is why split stay is the setting that matters.</strong> Four nights in the building you actually came for, the rest in something clean and well-located, is how you get an Alila or an Argos into a $10k trip. Put the signature nights in the middle, not at the start — you'll be too jet-lagged to look at anything properly on night one.</p>
+    <p><strong>Which is why split stay is the setting that matters.</strong> Four nights in the building you actually came for, the rest in something clean and well-located, is how you get a Barrocal or an Argos into a $10k trip. Put the signature nights in the middle, not at the start — you'll be too jet-lagged to look at anything properly on night one.</p>
     <p><strong>Your dates still carry three complications in Japan:</strong> Silver Week runs 19–23 September, the first full one since 2015, and your last five nights sit inside it. The Asian Games open in Aichi–Nagoya on 19 September. And mid-September is peak typhoon season in Okinawa, which averages about 7.7 approaches a year against three or four for the mainland.</p>
   </div>
 
   <footer>
     <h4>Where the numbers come from</h4>
     <ul>
-      <li><strong>Rooms</strong> — signature rates are the published or recently observed nightly price for the named properties: Alila Villas Uluwatu has shown around US$692 a night, Argos in Cappadocia from roughly US$273–330, Hoshinoya Taketomi across a 2026 band of about US$268–871 with US$746 seen mid-year. Ordinary-good rates use each destination's typical well-reviewed four-star. Tokyo's citywide average ran about ¥33,000 in May 2026, up nearly 13% year on year.</li>
+      <li><strong>Rooms</strong> — signature rates are the published or recently observed nightly price for the named properties — Argos in Cappadocia from roughly US$273–330, Hoshinoya Taketomi across a 2026 band of about US$268–871 with US$746 seen mid-year, and comparable figures elsewhere. Ordinary-good rates use each destination's typical well-run small hotel rather than its four-star chain. Tokyo's citywide average ran about ¥33,000 in May 2026, up nearly 13% year on year.</li>
       <li><strong>Flights</strong> — anchored to fares quoted for these dates in early August 2026: Sydney–Nadi from about $386 return for 13–22 September; Sydney–Okinawa around $852 via Taipei; JAL Sydney–Tokyo from about $2,033 for September. Europe sits in a $1,800–2,500 shoulder band, with sub-$1,300 fares available on 27–43 hour routings.</li>
       <li><strong>Daily spend</strong> — food, local transport, entries and incidentals per person per day, at the level each place genuinely costs.</li>
       <li><strong>Buffer</strong> — insurance at roughly $90 a head plus 10% contingency. In a typhoon window that contingency is the whole point.</li>
@@ -241,15 +385,25 @@ const DEST = [
   {
     id:'bali', name:'Bali — Uluwatu, Canggu, Ubud', tag:'Indonesia', groups:['tropical'], air:0,
     sub:'The most architecture per dollar, anywhere',
-    flight:600, mid:180, design:420, daily:90, extras:500,
-    heat:30, wx:5, arch:5,
+    flight:600, mid:180, design:400, daily:90, extras:500,
+    heat:30, wx:5, arch:{s:10,v:5,f:7}, land:{s:8,d:8,q:3},
     wxLine:'Dry season, 28–31°C, reliable sun, warm sea',
     note:'This is the answer to your brief and it is not close. Bali has more genuinely interesting contemporary architecture per square kilometre than anywhere else on this list, cliff-and-jungle scenery, guaranteed heat, and rates that leave room to actually stay in the good buildings.',
     stays:[
-      {n:'Alila Villas Uluwatu', a:'≈$1,050', d:'WOHA. Cantilevered villas 100m above the Indian Ocean, three-tier infinity pool, lava-rock and reclaimed-ironwood palette. The reference project for tropical modernism.'},
-      {n:'Bambu Indah, Sayan', a:'≈$500', d:'Ibuku bamboo structures and relocated antique Javanese bridal houses above the Ayung gorge. Structurally the most interesting thing you can sleep in.'},
-      {n:'The Slow, Canggu', a:'≈$400', d:'Brutalist tropical — board-formed concrete, terrazzo, a serious art programme. Twelve rooms.'},
-      {n:'Private pool villa, Ubud', a:'$280–450', d:'The baseline. Rice-terrace views, open-plan pavilion, your own pool, for less than a Tokyo business hotel.'}
+      {n:'Bambu Indah, Sayan', a:'≈$500', d:'Ibuku bamboo structures and relocated antique Javanese houses above the Ayung gorge. Structure entirely exposed, nothing concealed, nothing polished.'},
+      {n:'The Slow, Canggu', a:'≈$400', d:'Board-formed concrete, terrazzo, twelve rooms. Rough where it should be rough, and no attempt to look expensive.'},
+      {n:'Suarga Padang Padang', a:'≈$340', d:'Recycled ironwood and bamboo stepping down a cliff. Passive cooling doing the work rather than glass and air-conditioning.'},
+      {n:'Simple pool villa, Ubud', a:'$240–320', d:'Local builders, local timber, an open pavilion and a rice terrace. Often the most honest option on the island.'}
+    ],
+    tours:[
+      {n:'Nusa Penida day boat & snorkel', a:'$220'},
+      {n:'Mount Batur sunrise trek', a:'$150'},
+      {n:'Driver for the day, anywhere', a:'$60'}
+    ],
+    spots:[
+      {n:'Nyang Nyang Beach', d:'A long stair down the Uluwatu cliffs keeps it near-empty on a peninsula that isn\'t.'},
+      {n:'Sidemen valley', d:'Rice terraces with Agung behind them and none of the Tegallalang tour buses.'},
+      {n:'Banyu Wana Amertha', d:'Four falls in one gorge in the north, two hours from anywhere fashionable.'}
     ],
     watch:'Base in two areas, not five. Uluwatu to Ubud is two hours of traffic you will resent.'
   },
@@ -257,43 +411,73 @@ const DEST = [
     id:'turkiye', name:'İstanbul, Cappadocia &amp; the Aegean', tag:'Europe · Türkiye', groups:['europe'], air:2,
     sub:'Rooms carved into rock, at Turkish prices',
     flight:1700, mid:170, design:380, daily:100, extras:800,
-    heat:29, wx:5, arch:5,
+    heat:29, wx:5, arch:{s:9,v:10,f:9}, land:{s:9,d:8,q:6},
     wxLine:'26–30°C, dry, the best month of the year',
     note:'The only European option where design-led rooms and an $10k ceiling coexist. It is also the strongest pure architecture trip here — Byzantine, Ottoman and troglodyte in eleven days.',
     stays:[
-      {n:'Argos in Cappadocia, Uçhisar', a:'$430–520', d:'A restored monastery complex — nine mansions stepping down the hillside, rooms reached through underground tunnels, some with private cave pools. One of the best adaptive-reuse projects anywhere.'},
-      {n:'Museum Hotel, Uçhisar', a:'≈$500', d:'Restored cave dwellings hung with an actual antiquities collection, facing Pigeon Valley.'},
-      {n:'Soho House İstanbul', a:'≈$320', d:'The 19th-century Palazzo Corpi, former US embassy. Frescoed ceilings, a Beyoğlu location, and a pool on the roof.'},
-      {n:'Georges Hotel Galata', a:'≈$280', d:'A restored Galata townhouse with Golden Horn views from the terrace.'}
+      {n:'Argos in Cappadocia, Uçhisar', a:'$430–520', d:'A restored monastery complex — nine houses stepping down the hillside, rooms reached through original tunnels. Repair rather than reinvention, which is the whole appeal.'},
+      {n:'Serinn House, Ürgüp', a:'≈$260', d:'Five rooms in a 19th-century Greek stone house, restored with a light modernist hand. Small, quiet, no lobby.'},
+      {n:'Georges Hotel Galata, İstanbul', a:'≈$280', d:'A restored Galata townhouse. Original joinery, plain plaster, Golden Horn from the roof.'},
+      {n:'Stone village house, Alaçatı', a:'$180–260', d:'Ottoman-Greek masonry with lime render and blue shutters, converted room by room.'}
+    ],
+    tours:[
+      {n:'Cappadocia balloon at dawn', a:'$700'},
+      {n:'Ihlara Valley guided walk', a:'$180'},
+      {n:'Bosphorus ferry to Anadolu Kavağı', a:'$20'}
+    ],
+    spots:[
+      {n:'Soğanlı Valley', d:'Rock-cut churches an hour south of Göreme, usually with nobody in them.'},
+      {n:'Ihlara Valley', d:'A sixteen-kilometre gorge walk past Byzantine chapels along a river.'},
+      {n:'Kayaköy', d:'An abandoned Greek hill town above Fethiye, roofless and enormous.'}
     ],
     watch:'İstanbul needs four nights minimum. Don\'t add a third region — pick Cappadocia or the Aegean, not both.'
   },
   {
     id:'jp-okinawa', name:'Okinawa main island + Tokyo', tag:'Japan · tropical', groups:['japan','tropical'], air:0,
     sub:'Exactly what you asked for, at a price',
-    flight:1300, mid:230, design:470, daily:120, extras:900,
-    heat:30, wx:2, arch:5,
+    flight:1300, mid:230, design:430, daily:120, extras:900,
+    heat:30, wx:2, arch:{s:8,v:7,f:7}, land:{s:8,d:8,q:7},
     wxLine:'28°C and warm seas, but peak typhoon month',
     note:'Heat, extraordinary water, and some of the most disciplined resort architecture in the world. The budget only works on a split stay, and the weather is a genuine gamble.',
     stays:[
-      {n:'Hoshinoya Okinawa, Yomitan', a:'≈$700', d:'Walled in Ryukyuan gusuku stone, low-slung and inward-facing, opening onto the East China Sea. Restraint executed properly.'},
-      {n:'Halekulani Okinawa', a:'≈$600', d:'Onna coast, white-on-white, five pools stepped toward the water. Clean modernist resort planning.'},
-      {n:'Trunk(Hotel) Yoyogi Park, Tokyo', a:'≈$550', d:'Keiji Ashizawa. Small, beautifully detailed, facing the park — the best-designed room in Tokyo at this rate.'},
-      {n:'Design business hotel, Tokyo', a:'$200–260', d:'The sensible half of the split. Book Asakusa or Kuramae, not Ginza.'}
+      {n:'Hoshinoya Okinawa, Yomitan', a:'≈$700', d:'Walled in Ryukyuan gusuku stone, low and inward-facing, opening onto the East China Sea. Restraint held all the way through.'},
+      {n:'Hyakuna Garan, Nanjo', a:'≈$430', d:'Board-marked concrete and stone above the sea, a small onsen, very little else. The quietest good building in Okinawa.'},
+      {n:'Trunk(Hotel) Yoyogi Park, Tokyo', a:'≈$550', d:'Keiji Ashizawa. Twenty rooms, plain materials, immaculate joinery, facing the park.'},
+      {n:'Business hotel, Kuramae or Asakusa', a:'$180–240', d:'The sensible half of the split. Small, well-planned, entirely unpretentious.'}
+    ],
+    tours:[
+      {n:'Blue Cave snorkel, Onna', a:'$160'},
+      {n:'Kerama Islands day boat', a:'$300'},
+      {n:'Rental car, five days', a:'$450'}
+    ],
+    spots:[
+      {n:'Daisekirinzan', d:'Karst pinnacles and banyan forest at the island\'s northern tip.'},
+      {n:'Hiji Falls, Yanbaru', d:'An hour\'s climb through subtropical forest most visitors never reach.'},
+      {n:'Mount Gusuku, Ie Island', d:'A short ferry, a sharp cone, and the whole island below you.'}
     ],
     watch:'Refundable rooms throughout and a spare day either side. Silver Week hits your Tokyo leg — business hotels hold up, resorts do not.'
   },
   {
     id:'greece', name:'Milos or Naxos + Athens', tag:'Europe · Greece', groups:['europe'], air:2,
     sub:'Cycladic minimalism, over the line',
-    flight:1850, mid:240, design:480, daily:130, extras:800,
-    heat:28, wx:5, arch:5,
+    flight:1850, mid:240, design:440, daily:130, extras:800,
+    heat:28, wx:5, arch:{s:8,v:7,f:8}, land:{s:9,d:7,q:6},
     wxLine:'27–30°C, warmest sea of the year, August crowds gone',
     note:'September is the ideal month in the Cyclades and the vernacular is exactly your kind of building — whitewashed mass, small openings, everything oriented to the sea. The arithmetic is the problem, not the destination.',
     stays:[
-      {n:'Skinopi Lodge, Milos', a:'≈$520', d:'Five houses by Greek architects on a bare hillside above the gulf. Stone, concrete and shade structures, nothing surplus. A masterclass in siting.'},
-      {n:'Milos Cove', a:'≈$700', d:'Villas cut into the cliff around a private bay, cave-like interiors opening to full sea views.'},
-      {n:'Nine Muses, Naxos', a:'≈$380', d:'Cycladic vernacular done cleanly, on Agios Prokopios beach.'}
+      {n:'Skinopi Lodge, Milos', a:'≈$520', d:'Five houses on a bare hillside by Greek architects — stone, concrete, shade structures, nothing surplus. Probably the best-sited small hotel in the Aegean.'},
+      {n:'Monsieur Didot, Athens', a:'≈$330', d:'A 1930s neoclassical building held rather than gutted. Timber, plaster, marble only where it was already there.'},
+      {n:'Whitewashed pension, Naxos', a:'$160–230', d:'Cycladic vernacular done plainly — thick walls, small openings, a courtyard.'}
+    ],
+    tours:[
+      {n:'Kleftiko by boat, full day', a:'$260'},
+      {n:'Hire car on Milos, per day', a:'$80'},
+      {n:'Acropolis and its museum', a:'$90'}
+    ],
+    spots:[
+      {n:'Papafragas, Milos', d:'Sea caves and a slot of turquoise reached down a rock cleft.'},
+      {n:'Kleftiko by boat', d:'Pirate coves on the uninhabited southwest coast — only reachable by sea.'},
+      {n:'Apollonas, Naxos', d:'An unfinished ten-metre kouros still lying in the quarry where it cracked.'}
     ],
     watch:'Meltemi winds cancel ferries in September. Never sleep on an island the night before a long-haul departure.'
   },
@@ -301,13 +485,23 @@ const DEST = [
     id:'jp-yaeyama', name:'Ishigaki &amp; the Yaeyama islands', tag:'Japan · far south', groups:['japan','tropical'], air:0,
     sub:'The best building on this list, and the priciest',
     flight:1300, mid:250, design:700, daily:120, extras:1300,
-    heat:30, wx:2, arch:5,
+    heat:30, wx:2, arch:{s:9,v:3,f:7}, land:{s:9,d:9,q:8},
     wxLine:'29°C, subtropical, fully exposed to storms',
     note:'Closer to Taiwan than to Tokyo. Manta rays, mangrove rivers, and a resort that is essentially a constructed Ryukyuan village. Two domestic flights and a ferry to get there.',
     stays:[
-      {n:'Hoshinoya Taketomi Island', a:'$1,100–1,300', d:'Forty-eight freestanding villas inside a recreated Ryukyuan hamlet — red pantile roofs, coral-stone walls around each house, sliding walls that open the whole plan to the breeze. No televisions, by design.'},
-      {n:'Iraph Sui, Irabu Island', a:'≈$700', d:'Luxury Collection on a near-empty island, 58 rooms, several with private pools over the reef.'},
-      {n:'Ishigaki beachfront four-star', a:'$230–300', d:'The affordable half — fine, and forgettable.'}
+      {n:'Hoshinoya Taketomi Island', a:'$1,100–1,300', d:'Forty-eight houses inside a rebuilt Ryukyuan hamlet — red pantile, coral-stone walls, sliding walls that open the whole plan. A village typology, not a resort one.'},
+      {n:'Minshuku, Taketomi village', a:'$150–220', d:'A family house with tatami and a shared bath, inside the preserved village. Closer to the real thing than the resort is.'},
+      {n:'Ishigaki guesthouse', a:'$140–200', d:'Plain, well-run, near the port for the island ferries.'}
+    ],
+    tours:[
+      {n:'Manta Point dive, Ishigaki', a:'$400'},
+      {n:'Iriomote mangrove kayak to Pinaisara', a:'$350'},
+      {n:'Taketomi water-buffalo cart', a:'$40'}
+    ],
+    spots:[
+      {n:'Hoshizuna beach, Iriomote', d:'Sand made of star-shaped foraminifera shells. Genuinely strange.'},
+      {n:'Pinaisara Falls', d:'Kayak up a mangrove river, then climb to the top of Okinawa\'s tallest waterfall.'},
+      {n:'Hatoma Island', d:'Twenty minutes by ferry, about fifty residents, one road.'}
     ],
     watch:'Ferries stop before flights do. You can end up stranded on the wrong island with a long-haul departure booked.'
   },
@@ -315,27 +509,47 @@ const DEST = [
     id:'fiji', name:'Fiji — Mamanucas &amp; Coral Coast', tag:'Pacific', groups:['tropical'], air:0,
     sub:'Best weather odds, thinnest architecture',
     flight:550, mid:320, design:560, daily:130, extras:700,
-    heat:28, wx:5, arch:2,
+    heat:28, wx:5, arch:{s:4,v:1,f:4}, land:{s:8,d:8,q:5},
     wxLine:'Dry season, 26–28°C, low humidity, calm water',
     note:'Four hours, no jet lag, and September is genuinely its best month. The honest caveat for you: Fijian resorts are built beautifully in the vernacular sense — thatch, timber, volume — but there is very little here that would interest you as design.',
     stays:[
-      {n:'Six Senses Fiji, Malolo', a:'≈$1,000', d:'Solar-powered, locally quarried stone and timber, the most considered build in the country.'},
-      {n:'Tokoriki Island Resort', a:'≈$600', d:'Adults-only, thatched bures directly on sand, west-facing for sunsets.'},
-      {n:'Coral Coast four-star', a:'$280–350', d:'Mainland, a fraction of island rates, and where the budget actually balances.'}
+      {n:'Tokoriki Island Resort', a:'≈$600', d:'Adults-only, thatched bures on sand. Honest vernacular construction, if not architecture you would travel for.'},
+      {n:'Matava, Kadavu', a:'≈$350', d:'Off-grid timber bures, no roads, solar power. The least polished option in Fiji and the most likeable.'},
+      {n:'Coral Coast guesthouse', a:'$220–300', d:'Mainland, a fraction of island rates, where the budget actually balances.'}
+    ],
+    tours:[
+      {n:'Yasawas island-hop day', a:'$400'},
+      {n:'Intro dive, two tanks', a:'$350'},
+      {n:'Sabeto mud pools and gardens', a:'$80'}
+    ],
+    spots:[
+      {n:'Sawa-i-Lau caves', d:'Swim through a submerged passage into a second chamber, Yasawas.'},
+      {n:'Bouma Falls, Taveuni', d:'Three tiers, a forest walk between them, almost no one.'},
+      {n:'Sabeto hot springs', d:'Volcanic mud pools inland from Nadi — unglamorous and excellent.'}
     ],
     watch:'Resort food and drink is the quiet budget killer. Half-board beats à la carte over eleven nights.'
   },
   {
     id:'andalusia', name:'Seville, Granada &amp; Málaga', tag:'Europe · Spain', groups:['europe'], air:2,
     sub:'The strongest architecture, the tightest budget',
-    flight:1900, mid:190, design:380, daily:120, extras:700,
-    heat:31, wx:5, arch:5,
+    flight:1900, mid:190, design:360, daily:120, extras:700,
+    heat:31, wx:5, arch:{s:7,v:10,f:9}, land:{s:7,d:7,q:5},
     wxLine:'28–33°C, dry, cooling through the month',
     note:'The Alhambra, the Mezquita, Seville\'s Alcázar — probably the densest run of great buildings you could see in eleven days. It fits, but only just, and only on a split stay.',
     stays:[
-      {n:'Corral del Rey, Seville', a:'≈$400', d:'A 17th-century casa palacio in Santa Cruz, restored around its courtyard with the original Tuscan columns intact.'},
-      {n:'Hospes Palacio de los Patos, Granada', a:'≈$420', d:'A listed 19th-century palace joined to a sharp contemporary wing in alabaster and glass. The junction between the two is the point.'},
-      {n:'Boutique townhouse, Málaga', a:'$180–240', d:'The affordable half, walking distance from the Picasso and the Roman theatre.'}
+      {n:'Corral del Rey, Seville', a:'≈$400', d:'A 17th-century casa palacio restored around its courtyard, original Tuscan columns intact and the repairs left legible.'},
+      {n:'Casa Morisca, Granada', a:'≈$280', d:'A 15th-century house in the Albaicín around a water court. Almost nothing added, which is the point.'},
+      {n:'Townhouse, Málaga centro', a:'$170–230', d:'Plain, walkable to the Picasso and the Roman theatre.'}
+    ],
+    tours:[
+      {n:'Alhambra with a guide', a:'$120'},
+      {n:'Caminito del Rey walkway', a:'$60'},
+      {n:'Flamenco at a peña, not a tablao', a:'$70'}
+    ],
+    spots:[
+      {n:'Setenil de las Bodegas', d:'A town built underneath overhanging rock, houses roofed by cliff.'},
+      {n:'Caminito del Rey', d:'A walkway pinned to a gorge wall a hundred metres above the river.'},
+      {n:'Ronda at dawn', d:'The Tajo bridge before the coach parties arrive from the coast.'}
     ],
     watch:'Alhambra tickets sell out months ahead and there is no workaround. Book them before you book anything else.'
   },
@@ -343,13 +557,24 @@ const DEST = [
     id:'jp-classic', name:'Tokyo → Kyoto → Osaka', tag:'Japan · classic', groups:['japan'], air:0,
     sub:'Great buildings, worst possible fortnight',
     flight:1350, mid:260, design:480, daily:150, extras:700,
-    heat:30, wx:3, arch:5,
+    heat:30, wx:3, arch:{s:8,v:10,f:10}, land:{s:6,d:7,q:2},
     wxLine:'Warm and humid, 28–31°C, storms possible',
     note:'Architecturally unbeatable and, for these exact dates, the trip I would argue you out of. You would pay a premium to travel in the most crowded domestic week in eleven years.',
     stays:[
-      {n:'Ace Hotel Kyoto', a:'≈$500', d:'Kengo Kuma with Commune. The 1926 Kyoto Central Telephone Office wrapped in new timber lattice — the best old-and-new stitch in the city.'},
-      {n:'Hotel Okura Tokyo, Heritage Wing', a:'≈$700', d:'Yoshiro Taniguchi\'s 1962 lobby, faithfully rebuilt. Post-war Japanese modernism at its absolute peak.'},
-      {n:'Trunk(Hotel) Yoyogi Park', a:'≈$550', d:'Keiji Ashizawa, twenty rooms, immaculate detailing over the park.'}
+      {n:'Maana Kamo, Kyoto', a:'≈$420', d:'A machiya stripped back to structure and left that way — earth walls, cedar, a courtyard, no reception. Restoration as subtraction.'},
+      {n:'Ace Hotel Kyoto', a:'≈$500', d:'Kengo Kuma with Commune. The 1926 Central Telephone Office wrapped in new timber lattice; the join between old and new is the whole idea.'},
+      {n:'Hotel Okura Tokyo, Heritage Wing', a:'≈$700', d:'Yoshiro Taniguchi\'s 1962 lobby, faithfully rebuilt. Post-war Japanese modernism at its peak, and far quieter than its reputation.'},
+      {n:'Business hotel, Tokyo', a:'$180–240', d:'Small, exact, no pretension. Japan does this better than anywhere.'}
+    ],
+    tours:[
+      {n:'Naoshima day trip from Osaka', a:'$300'},
+      {n:'Nakasendō walk, luggage forwarded', a:'$20'},
+      {n:'Tea ceremony, small group', a:'$120'}
+    ],
+    spots:[
+      {n:'Kurama to Kibune', d:'A two-hour ridge walk between two shrines, out of central Kyoto.'},
+      {n:'Ōhara', d:'Moss gardens forty minutes north, with a fraction of Arashiyama\'s crowd.'},
+      {n:'Nakasendō, Magome–Tsumago', d:'Eight kilometres of preserved post road through the Kiso valley.'}
     ],
     watch:'Silver Week, 19–23 September, covers your last five nights. Reserve shinkansen seats the day booking opens.'
   },
@@ -357,41 +582,72 @@ const DEST = [
     id:'balkans', name:'Albania &amp; the Montenegrin coast', tag:'Europe · Adriatic', groups:['europe'], air:2,
     sub:'Cheapest Europe, thinnest design scene',
     flight:1850, mid:140, design:260, daily:90, extras:700,
-    heat:28, wx:5, arch:3,
+    heat:28, wx:5, arch:{s:4,v:7,f:8}, land:{s:8,d:7,q:8},
     wxLine:'26–30°C, swimmable sea, empty beaches',
     note:'Adriatic water and Ottoman hill towns at Southeast Asian prices. Berat and Gjirokastër are extraordinary as urban fabric — but the hotels themselves are guesthouses, not design objects.',
     stays:[
-      {n:'Boutique stone house, Gjirokastër', a:'$150–220', d:'Restored Ottoman tower houses with slate roofs and timber galleries. The building is the reason to come.'},
-      {n:'Design villa, Ksamil', a:'$200–280', d:'New-build, sharp, straight onto the water opposite Corfu.'},
-      {n:'Kotor old town apartment', a:'≈$200', d:'Inside the walls, under the mountain.'}
+      {n:'Stone tower house, Gjirokastër', a:'$150–220', d:'Restored Ottoman kulla with slate roofs and timber galleries. The building is the reason to come.'},
+      {n:'Kotor old town apartment', a:'≈$200', d:'Inside the walls, thick masonry, under the mountain.'},
+      {n:'Guesthouse, Ksamil', a:'$120–180', d:'Plain and new-built, straight onto the water opposite Corfu.'}
+    ],
+    tours:[
+      {n:'Theth–Valbona crossing with transfers', a:'$200'},
+      {n:'Blue Eye and Butrint day', a:'$120'},
+      {n:'Kotor bay boat, half day', a:'$150'}
+    ],
+    spots:[
+      {n:'Blue Eye spring', d:'A karst spring so deep nobody has found the bottom, near Sarandë.'},
+      {n:'Theth to Valbona', d:'A pass crossing through the Accursed Mountains — the best walk in the Balkans.'},
+      {n:'Lake Skadar', d:'Flooded villages and pelicans on the Montenegro–Albania border.'}
     ],
     watch:'Roads are slow and a hire car is essential. Budget real driving time between coast and interior.'
   },
   {
     id:'portugal', name:'Lisbon, Alentejo &amp; the Algarve', tag:'Europe · Portugal', groups:['europe'], air:2,
     sub:'Best pure architecture trip, longest flight',
-    flight:1950, mid:220, design:400, daily:130, extras:700,
-    heat:27, wx:5, arch:5,
+    flight:1950, mid:220, design:360, daily:130, extras:700,
+    heat:27, wx:5, arch:{s:7,v:10,f:9}, land:{s:7,d:7,q:6},
     wxLine:'25–29°C, dry, Atlantic breeze',
     note:'Siza, Souto de Moura, the Gulbenkian, azulejo everywhere. If the trip were purely about buildings this would win — but Lisbon is almost the furthest point on earth from Sydney and it just misses the ceiling.',
     stays:[
-      {n:'Santiago de Alcántara / Alentejo rural hotels', a:'$300–420', d:'Cork-country conversions in whitewashed mass with modern insertions — the current Portuguese house language, done well.'},
-      {n:'Memmo Alfama, Lisbon', a:'≈$380', d:'Cut into the Alfama hillside, red pool terrace over the Tagus rooftops.'},
-      {n:'Lisbon design apartment', a:'$180–240', d:'The affordable half, and a better way to eat.'}
+      {n:'São Lourenço do Barrocal, Alentejo', a:'≈$480', d:'Souto de Moura\'s restoration of a two-hundred-year-old farm hamlet. Lime render, existing walls, new work sitting quietly beside old. The clearest example of this sensibility anywhere on the list.'},
+      {n:'Santa Clara 1728, Lisbon', a:'≈$450', d:'Manuel Aires Mateus. Limestone, oak, six rooms, almost no furniture and no decoration at all.'},
+      {n:'Casa Modesta, Olhão', a:'≈$300', d:'A family house on the Ria Formosa rebuilt by the daughter of the family — Algarvian vernacular, lime, salt air, nine rooms.'},
+      {n:'Lisbon apartment', a:'$160–220', d:'The affordable half, and a better way to eat.'}
+    ],
+    tours:[
+      {n:'Benagil caves by kayak', a:'$120'},
+      {n:'Alentejo estate and cellar visit', a:'$160'},
+      {n:'Sintra: Pena and Regaleira', a:'$90'}
+    ],
+    spots:[
+      {n:'Praia da Ursa', d:'Sea stacks below Cabo da Roca, down a path most people don\'t attempt.'},
+      {n:'Monsaraz', d:'A walled hill town over the Alqueva reservoir, one of Europe\'s darkest skies.'},
+      {n:'Benagil by kayak', d:'Paddle in rather than queue for a boat — the only civilised way to see it.'}
     ],
     watch:'26–30 hours door to door each way. Eight full days on the ground out of eleven nights.'
   },
   {
     id:'vietnam-n', name:'Hanoi, Ninh Bình &amp; Hạ Long', tag:'Southeast Asia', groups:[], air:0,
     sub:'Cheapest way to sleep somewhere remarkable',
-    flight:850, mid:150, design:300, daily:80, extras:700,
-    heat:31, wx:3, arch:4,
+    flight:850, mid:150, design:280, daily:80, extras:700,
+    heat:31, wx:3, arch:{s:7,v:5,f:7}, land:{s:9,d:8,q:6},
     wxLine:'Humid, 28–32°C, tail of the wet season',
     note:'Northern Vietnam only — the central coast is in its worst months. Karst scenery as good as anything in Asia, and Bensley\'s Hanoi work is genuinely worth studying.',
     stays:[
-      {n:'Capella Hanoi', a:'≈$420', d:'Bill Bensley as opera house — maximalist, theatrical, obsessively detailed. The opposite of everything else on this list.'},
-      {n:'Bamboo eco-lodge, Ninh Bình', a:'$180–260', d:'Vo Trong Nghia-influenced bamboo vaults among the karsts and rice paddy.'},
-      {n:'Hanoi Old Quarter boutique', a:'$120–170', d:'French-colonial shophouse conversions, walking distance to everything.'}
+      {n:'Bamboo lodge, Ninh Bình', a:'$200–280', d:'Vo Trong Nghia-influenced bamboo vaults among the karsts. Structure fully exposed, built by local hands.'},
+      {n:'Hanoi shophouse conversion', a:'$130–190', d:'French-colonial tube house, tiled floors, a light well, walking distance to everything.'},
+      {n:'Lan Hạ Bay junk cabin', a:'$260–340', d:'Timber, one night, and the karsts outside the window.'}
+    ],
+    tours:[
+      {n:'Lan Hạ Bay overnight junk', a:'$700'},
+      {n:'Tam Cốc rowboat, Ninh Bình', a:'$60'},
+      {n:'Hanoi street-food walk', a:'$90'}
+    ],
+    spots:[
+      {n:'Lan Hạ Bay', d:'The same karsts as Hạ Long with a tenth of the boats.'},
+      {n:'Hang Múa', d:'Five hundred steps to a dragon ridge over the Ninh Bình paddies.'},
+      {n:'Ban Gioc', d:'A waterfall on the Chinese border, six hours from Hanoi and worth it.'}
     ],
     watch:'September still throws storms at the north coast. Don\'t book the bay cruise for your last two days.'
   },
@@ -399,27 +655,47 @@ const DEST = [
     id:'palawan', name:'Palawan — El Nido &amp; Coron', tag:'Philippines', groups:['tropical'], air:0,
     sub:'Best water, worst month',
     flight:900, mid:200, design:400, daily:90, extras:900,
-    heat:30, wx:2, arch:3,
+    heat:30, wx:2, arch:{s:5,v:2,f:3}, land:{s:10,d:8,q:6},
     wxLine:'Habagat season — rain, swell, cancelled boats',
     note:'Extraordinary limestone and lagoons at low-season rates. September is the southwest monsoon, which is precisely when the boat tours you came for get called off.',
     stays:[
-      {n:'Kalinaw Resort, San Vicente', a:'≈$420', d:'Six villas, thatch and hardwood, on an empty fourteen-kilometre beach.'},
-      {n:'Cauayan Resort, El Nido', a:'≈$450', d:'Cliffside cabanas facing Bacuit Bay.'},
-      {n:'El Nido town boutique', a:'$150–200', d:'Basic, close to the boats.'}
+      {n:'Kalinaw Resort, San Vicente', a:'≈$420', d:'Six villas in thatch and hardwood on an empty fourteen-kilometre beach.'},
+      {n:'Cauayan Resort, El Nido', a:'≈$450', d:'Cliffside cabanas facing Bacuit Bay, timber and local stone.'},
+      {n:'El Nido town guesthouse', a:'$130–190', d:'Basic, close to the boats.'}
+    ],
+    tours:[
+      {n:'El Nido lagoons, Tours A and C', a:'$200'},
+      {n:'Coron wreck dive, two tanks', a:'$400'},
+      {n:'Nacpan Beach with transfer', a:'$60'}
+    ],
+    spots:[
+      {n:'Nacpan Beach', d:'Four kilometres of empty sand twenty minutes from El Nido.'},
+      {n:'Kayangan Lake', d:'Brackish water over limestone in Coron — the clearest lake in Asia.'},
+      {n:'Tabon Caves', d:'Where the oldest human remains in the Philippines were found.'}
     ],
     watch:'Boats cancel on swell, not just rain, and the connecting flights are small and weather-sensitive.'
   },
   {
     id:'taiwan', name:'Taipei, Taroko &amp; the east coast', tag:'Northeast Asia', groups:[], air:0,
     sub:'Cheap, hot, and typhoon-exposed',
-    flight:900, mid:170, design:300, daily:90, extras:500,
-    heat:31, wx:2, arch:3,
+    flight:900, mid:170, design:280, daily:90, extras:500,
+    heat:31, wx:2, arch:{s:5,v:5,f:5}, land:{s:8,d:8,q:7},
     wxLine:'Hot and humid, 30°C, peak typhoon season',
     note:'Night markets, hot springs and a marble gorge at two-thirds of Japan\'s daily cost. Same weather gamble as Okinawa, without the resort architecture to justify it.',
     stays:[
-      {n:'Silks Place Taroko', a:'≈$340', d:'Inside the national park at the gorge mouth — the location does the work.'},
-      {n:'Kimpton Da An, Taipei', a:'≈$300', d:'Sharp, contemporary, in the best-walking district of the city.'},
-      {n:'Taipei boutique', a:'$150–200', d:'Plentiful and good near Zhongshan.'}
+      {n:'Silks Place Taroko', a:'≈$340', d:'Inside the national park at the mouth of the gorge. The setting does the work.'},
+      {n:'Play Design Hotel, Taipei', a:'≈$260', d:'Small rooms furnished entirely with Taiwanese designers\' work, changed regularly. More gallery than hotel.'},
+      {n:'Zhongshan boutique, Taipei', a:'$150–200', d:'Plentiful, plain, and the best walking district in the city.'}
+    ],
+    tours:[
+      {n:'Taroko Gorge with a driver', a:'$260'},
+      {n:'Jiufen and Shifen day', a:'$180'},
+      {n:'Beitou hot spring, private room', a:'$60'}
+    ],
+    spots:[
+      {n:'Shakadang Trail', d:'A river walk cut into marble inside Taroko Gorge.'},
+      {n:'Qingshui Cliffs', d:'Eight hundred metres of rock dropping straight into the Pacific.'},
+      {n:'Sandiaoling', d:'Three waterfalls on an old mining railway line near Pingxi.'}
     ],
     watch:'Typhoons close the east coast highway and the gorge outright. Let Taipei absorb a lost day.'
   },
@@ -427,12 +703,22 @@ const DEST = [
     id:'newcal', name:'New Caledonia — Nouméa &amp; Isle of Pines', tag:'Pacific', groups:['tropical'], air:0,
     sub:'One great building, cool for your brief',
     flight:850, mid:300, design:480, daily:160, extras:900,
-    heat:25, wx:5, arch:4,
+    heat:25, wx:5, arch:{s:4,v:7,f:4}, land:{s:9,d:7,q:8},
     wxLine:'Dry and mild, 22–26°C — pleasant, not hot',
     note:'Worth naming for one reason: Renzo Piano\'s Tjibaou Cultural Centre outside Nouméa is among the finest buildings in the Pacific. But at 22–26°C it isn\'t the heat you asked for, and it is the most expensive place per day here.',
     stays:[
-      {n:'Le Méridien Isle of Pines', a:'≈$520', d:'Oro Bay, on the natural piscine. Position over design.'},
-      {n:'Nouméa self-catering apartment', a:'$220–300', d:'Anse Vata, and a way around French grocery prices.'}
+      {n:'Le Méridien Isle of Pines', a:'≈$520', d:'On the natural piscine at Oro Bay. Position rather than architecture — the building to see here is Piano\'s Tjibaou Centre, and you can only visit it.'},
+      {n:'Nouméa apartment, Anse Vata', a:'$220–300', d:'Self-catering, and a way around French grocery prices.'}
+    ],
+    tours:[
+      {n:'Isle of Pines lagoon day', a:'$300'},
+      {n:'Îlot Amédée by boat', a:'$350'},
+      {n:'Tjibaou Cultural Centre', a:'$30'}
+    ],
+    spots:[
+      {n:'Oro Bay piscine', d:'A natural saltwater pool fed through a rock channel, Isle of Pines.'},
+      {n:'Heart of Voh', d:'A heart-shaped clearing in the mangroves, only legible from the air.'},
+      {n:'Îlot Amédée', d:'A 19th-century iron lighthouse on a sand islet you can walk around in ten minutes.'}
     ],
     watch:'Groceries and restaurants cost more than Sydney. Self-cater half the trip or this doesn\'t balance.'
   },
@@ -440,12 +726,22 @@ const DEST = [
     id:'cooks', name:'Rarotonga &amp; Aitutaki', tag:'Pacific', groups:['tropical'], air:0,
     sub:'The lagoon, and not much building',
     flight:1300, mid:300, design:520, daily:130, extras:1100,
-    heat:26, wx:5, arch:2,
+    heat:26, wx:5, arch:{s:3,v:1,f:3}, land:{s:9,d:6,q:6},
     wxLine:'Dry season, 25–27°C, the best window of the year',
     note:'Aitutaki\'s lagoon is the postcard and September is its best month. Little architectural interest, warm rather than hot, and the internal flight is priced like an international one.',
     stays:[
-      {n:'Pacific Resort Aitutaki', a:'≈$650', d:'Above the lagoon on Amuri, timber and thatch, the view doing the heavy lifting.'},
-      {n:'Rarotonga beachfront villa', a:'$260–340', d:'Muri Beach, self-contained, straight onto sand.'}
+      {n:'Pacific Resort Aitutaki', a:'≈$650', d:'Timber and thatch above the lagoon on Amuri. The view carries it entirely.'},
+      {n:'Beachfront villa, Muri', a:'$260–340', d:'Self-contained, straight onto sand, nothing more to it.'}
+    ],
+    tours:[
+      {n:'Aitutaki lagoon cruise', a:'$400'},
+      {n:'Cross-island track, guided', a:'$160'},
+      {n:'Punanga Nui Saturday market', a:'Free'}
+    ],
+    spots:[
+      {n:'Te Rua Manga', d:'The cross-island track over the Needle — three hours, and the whole of Raro below.'},
+      {n:'Aitutaki lagoon', d:'One Foot Island, and sandbars that appear and vanish with the tide.'},
+      {n:'Wigmore\'s Waterfall', d:'A short walk inland, and usually empty.'}
     ],
     watch:'The Raro–Aitutaki hop is the budget killer. Two or three nights there, the rest on Raro.'
   },
@@ -453,13 +749,23 @@ const DEST = [
     id:'korea', name:'Seoul, Busan &amp; Jeju', tag:'Northeast Asia', groups:[], air:0,
     sub:'Strong design, wrong temperature',
     flight:900, mid:200, design:350, daily:120, extras:500,
-    heat:24, wx:5, arch:5,
+    heat:24, wx:5, arch:{s:9,v:9,f:7}, land:{s:7,d:8,q:6},
     wxLine:'Early autumn, 22–26°C, crisp and dry',
     note:'Included because the architecture is superb — Jeju alone has Tadao Ando\'s Genius Loci and Glass House, and Seoul is a working laboratory of contemporary practice. But 22–26°C is autumn, not heat.',
     stays:[
-      {n:'Podo Hotel, Jeju', a:'≈$400', d:'Itami Jun. A roof profiled on the volcanic hills and Jeju\'s thatched vernacular — one of the great small hotels in Asia.'},
-      {n:'Nest Hotel, Incheon', a:'≈$220', d:'Quiet, coastal, immaculately detailed modernism.'},
-      {n:'Seoul boutique, Bukchon', a:'$180–250', d:'Hanok conversions among the old courtyard houses.'}
+      {n:'Podo Hotel, Jeju', a:'≈$400', d:'Itami Jun. A roof profiled on the volcanic hills and Jeju\'s thatched vernacular, in earth and timber. One of the great small hotels in Asia and almost nobody knows it.'},
+      {n:'Nest Hotel, Incheon', a:'≈$220', d:'Quiet coastal modernism, immaculately detailed, unfashionably plain.'},
+      {n:'Hanok stay, Bukchon', a:'$180–250', d:'A courtyard house among the old streets — timber frame, paper, underfloor heat.'}
+    ],
+    tours:[
+      {n:'DMZ from Seoul, half day', a:'$200'},
+      {n:'Jeju: Genius Loci and Glass House', a:'$60'},
+      {n:'Olle Trail 7, self-guided', a:'Free'}
+    ],
+    spots:[
+      {n:'Olle Trail 7', d:'Jeju\'s coastal path — volcanic rock, sea, and almost no foreign walkers.'},
+      {n:'Seongsan Ilchulbong', d:'A tuff cone rising from the sea, best an hour before sunrise.'},
+      {n:'Bukhansan ridge', d:'Granite peaks reachable by subway from central Seoul.'}
     ],
     watch:'Chuseok falls in late September — check the exact dates before locking any domestic travel.'
   },
@@ -467,28 +773,47 @@ const DEST = [
     id:'chile', name:'Santiago, Valparaíso &amp; Atacama', tag:'South America · Chile', groups:['americas'], air:1,
     sub:'Closest South America gets, still short',
     flight:1700, mid:200, design:420, daily:130, extras:1100,
-    heat:24, wx:4, arch:4,
+    heat:24, wx:4, arch:{s:8,v:5,f:6}, land:{s:10,d:8,q:7},
     wxLine:'Early spring, 10–18°C in the cities, 24°C and dry in the desert',
     note:'Santiago is only 12.5 hours direct, which makes Chile the most reachable part of the continent. But September is early spring in the southern hemisphere — you would be swapping Sydney\'s season for the same one, and the numbers still land over.',
     stays:[
-      {n:'Tierra Atacama, San Pedro', a:'≈$900', d:'Adobe, local stone and weathered timber by González and Searle, low against the altiplano. Full board, and one of the best-sited hotels in South America.'},
-      {n:'Explora Atacama', a:'≈$1,000', d:'The original explora template — inward-looking courtyards, all excursions included.'},
-      {n:'Casa Higueras, Valparaíso', a:'≈$300', d:'A 1920s house terraced down Cerro Alegre with the whole bay in front of it.'},
-      {n:'Lastarria boutique, Santiago', a:'$180–240', d:'The affordable half, walkable to the good museums.'}
+      {n:'Tierra Atacama, San Pedro', a:'≈$900', d:'Adobe, local stone and weathered timber by González and Searle, held low against the altiplano. Full board and every excursion included.'},
+      {n:'explora Atacama', a:'≈$1,000', d:'Germán del Sol. Whitewashed courtyards turned inward against the desert — plain, rigorous, no gestures.'},
+      {n:'Casa Higueras, Valparaíso', a:'≈$300', d:'A 1920s house terraced down Cerro Alegre with the bay in front of it.'}
+    ],
+    tours:[
+      {n:'El Tatio geysers before dawn', a:'$200'},
+      {n:'Valle de la Luna at sunset', a:'$120'},
+      {n:'Laguna Cejar salt float', a:'$140'}
+    ],
+    spots:[
+      {n:'Valle de la Luna', d:'Salt formations and dunes that genuinely do not look like Earth.'},
+      {n:'El Tatio at dawn', d:'The highest geyser field in the world, at 4,300 metres and minus ten.'},
+      {n:'Laguna Cejar', d:'Float in brine so dense you cannot sink, with the Andes behind you.'}
     ],
     watch:'Fiestas Patrias falls on 18 September — the biggest national holiday of the year. Transport and rooms book out and much of Santiago closes.'
   },
   {
     id:'brazil', name:'Rio &amp; São Paulo', tag:'South America · Brazil', groups:['americas'], air:2,
     sub:'The architecture pilgrimage, well over budget',
-    flight:2500, mid:240, design:450, daily:140, extras:900,
-    heat:26, wx:4, arch:5,
+    flight:2500, mid:240, design:400, daily:140, extras:900,
+    heat:26, wx:4, arch:{s:8,v:10,f:8}, land:{s:8,d:6,q:4},
     wxLine:'Early spring, 24–27°C in Rio, warming through the month',
     note:'Purely on buildings this would beat everything else here — Niemeyer\'s MAC Niterói, and Lina Bo Bardi\'s MASP and SESC Pompéia in São Paulo, which is arguably the most important building of the last century that most architects never see. The flight is what kills it.',
     stays:[
-      {n:'Rosewood São Paulo', a:'≈$950', d:'Jean Nouvel and Philippe Starck inside the restored Matarazzo maternity hospital. A vertical garden tower beside a 1920s shell.'},
-      {n:'Hotel Emiliano, Rio', a:'≈$700', d:'Arthur Casas on Copacabana — brise-soleil facade, rooftop pool, immaculate Brazilian modernist detailing.'},
-      {n:'Santa Teresa boutique, Rio', a:'$260–340', d:'Restored colonial houses on the hill, above the noise.'}
+      {n:'Hotel Emiliano, Rio', a:'≈$700', d:'Arthur Casas on Copacabana — a brise-soleil facade doing real work, Brazilian hardwood, no gilding anywhere.'},
+      {n:'Casa Santa Teresa, Rio', a:'$260–340', d:'Restored colonial houses on the hill, above the noise, tiled and shuttered.'},
+      {n:'Guest house, Vila Madalena, São Paulo', a:'$180–250', d:'Modest, and twenty minutes from SESC Pompéia — which is the reason you came.'}
+    ],
+    tours:[
+      {n:'Tijuca forest and Vista Chinesa', a:'$180'},
+      {n:'Pedra Bonita climb', a:'$100'},
+      {n:'MASP, SESC Pompéia, Casa de Vidro', a:'$40'}
+    ],
+    spots:[
+      {n:'Vista Chinesa', d:'A pavilion in the Tijuca forest with the best view in Rio and no queue.'},
+      {n:'Pedra Bonita', d:'An hour\'s climb to the hang-gliding ramp above São Conrado.'},
+      {n:'Lopes Mendes', d:'Ilha Grande — a two-hour walk to what is often called Brazil\'s best beach.'}
     ],
     watch:'Roughly 30 hours each way via Santiago or Auckland. Nine days on the ground, and about $5,000 of the budget gone on seats.'
   },
@@ -496,13 +821,23 @@ const DEST = [
     id:'canada', name:'Vancouver, Whistler &amp; the Rockies', tag:'North America · Canada', groups:['americas'], air:1,
     sub:'Wrong season, wrong budget',
     flight:1950, mid:280, design:480, daily:180, extras:1400,
-    heat:18, wx:4, arch:4,
+    heat:18, wx:4, arch:{s:7,v:5,f:5}, land:{s:10,d:9,q:5},
     wxLine:'Early autumn, 15–20°C, first snow possible in the Rockies',
     note:'Priced for completeness. September in British Columbia is beautiful — larches turning, quiet trails — but it is 15–20°C, not heat, and Canada is one of the most expensive countries on this list once you add a hire car and eleven days of eating.',
     stays:[
-      {n:'Wickaninnish Inn, Tofino', a:'≈$800', d:'Timber and glass driven into the rock above Chesterman Beach, built for watching Pacific storms.'},
-      {n:'Nita Lake Lodge, Whistler', a:'≈$450', d:'Lakeside, heavy timber, next to the old rail line.'},
-      {n:'Vancouver design hotel', a:'$300–400', d:'Gastown or Yaletown, walkable to everything worth seeing.'}
+      {n:'Wickaninnish Inn, Tofino', a:'≈$800', d:'Timber and glass driven into rock above Chesterman Beach, built for watching Pacific storms. Heavy structure, no polish.'},
+      {n:'Nita Lake Lodge, Whistler', a:'≈$450', d:'Lakeside, heavy timber, beside the old rail line.'},
+      {n:'Vancouver apartment, Mount Pleasant', a:'$250–330', d:'Plain and well-placed. Fogo Island Inn is the great Canadian building, and it is four thousand kilometres the wrong way.'}
+    ],
+    tours:[
+      {n:'Tofino whale and bear boat', a:'$300'},
+      {n:'Icefields Parkway, self-drive', a:'Fuel only'},
+      {n:'Joffre Lakes day walk', a:'Parking only'}
+    ],
+    spots:[
+      {n:'Joffre Lakes', d:'Three glacial lakes stacked up a valley north of Whistler.'},
+      {n:'Wild Pacific Trail', d:'Storm-beaten headland walking at Ucluelet, better than Tofino\'s.'},
+      {n:'Moraine Lake at dawn', d:'The only hour it isn\'t unbearable, and it is worth the alarm.'}
     ],
     watch:'A hire car is unavoidable for the Rockies, adding around $1,400 over eleven days before fuel.'
   }
@@ -510,6 +845,24 @@ const DEST = [
 
 const state = {mode:'split', sig:4, filter:'all', sort:'total', nights:11, travellers:2, buffer:true, ceiling:10000};
 const money = n => '$' + Math.round(n).toLocaleString('en-AU');
+const archScore = d => d.arch.s + d.arch.v + d.arch.f;
+const landScore = d => d.land.s + d.land.d + d.land.q;
+
+const ARCH_RANK = {}, HEAT_RANK = {}, COST_RANK = {};
+[...DEST].sort((a,b) => archScore(b) - archScore(a) || a.flight - b.flight)
+  .forEach((d,i) => { ARCH_RANK[d.id] = i + 1; });
+[...DEST].sort((a,b) => b.heat - a.heat || archScore(b) - archScore(a))
+  .forEach((d,i) => { HEAT_RANK[d.id] = i + 1; });
+const LAND_RANK = {};
+[...DEST].sort((a,b) => landScore(b) - landScore(a) || archScore(b) - archScore(a))
+  .forEach((d,i) => { LAND_RANK[d.id] = i + 1; });
+const TOTAL_DEST = DEST.length;
+
+function refreshCostRank(){
+  [...DEST].map(d => ({id:d.id, t:cost(d).total}))
+    .sort((a,b) => a.t - b.t)
+    .forEach((d,i) => { COST_RANK[d.id] = i + 1; });
+}
 
 function cost(d){
   const air = d.air || 0;
@@ -535,8 +888,11 @@ function visible(){
   if (state.filter === 'japan')  list = list.filter(d => d.groups.includes('japan'));
   if (state.filter === 'europe') list = list.filter(d => d.groups.includes('europe'));
   if (state.filter === 'americas') list = list.filter(d => d.groups.includes('americas'));
+  if (state.filter === 'scenery')  list = list.filter(d => d.land.s >= 8);
+  if (state.filter === 'offradar') list = list.filter(d => d.land.q >= 7);
   if (state.filter === 'fits')   list = list.filter(d => d.c.total <= state.ceiling);
-  if (state.sort === 'design')     list.sort((a,b) => (b.arch - a.arch) || (a.c.total - b.c.total));
+  if (state.sort === 'design')     list.sort((a,b) => (archScore(b) - archScore(a)) || (a.c.total - b.c.total));
+  else if (state.sort === 'land')  list.sort((a,b) => (landScore(b) - landScore(a)) || (a.c.total - b.c.total));
   else if (state.sort === 'heat')  list.sort((a,b) => (b.heat - a.heat) || (a.c.total - b.c.total));
   else                             list.sort((a,b) => a.c.total - b.c.total);
   return list;
@@ -551,10 +907,15 @@ function renderRail(list){
   rail.innerHTML = `
     <div class="overzone" style="--p:${p}"></div>
     <div class="ceiling" data-label="${money(state.ceiling)}" style="--p:${p}"></div>
-    ${list.map(d => {
+    ${list.map((d,i) => {
       const c = d.c, over = c.total > state.ceiling;
+      const meta = state.sort==='design' ? 'Architecture ' + archScore(d) + '/30'
+                 : state.sort==='land'   ? 'Landscape &amp; doing ' + landScore(d) + '/30'
+                 : state.sort==='heat'   ? d.heat + '°C daytime'
+                 : d.tag;
       return `<div class="row" data-jump="${d.id}" tabindex="0" role="button">
-        <div class="rname">${d.name}<small>${d.tag}</small></div>
+        <div class="rord">${i+1}</div>
+        <div class="rname">${d.name}<small>${meta}</small></div>
         <div class="bar">
           <i style="width:${pct(c.flights)}%;background:var(--c-fly)"></i>
           <i style="width:${pct(c.stay)}%;background:var(--c-stay)"></i>
@@ -583,22 +944,46 @@ function renderCards(list){
       <span class="track"><i style="width:${(v/maxTotal*100).toFixed(1)}%;background:${colour(k)}"></i></span>
       <em>${money(v)}</em></div>`;
     const pips = (score, warnLow) => [1,2,3,4,5].map(n =>
-      `<i class="pip ${n<=score ? (warnLow && score<=2 ? 'warn' : (warnLow?'on':'gold')) : ''}"></i>`).join('');
+      `<i class="pip ${n<=score ? (warnLow && score<=2 ? 'warn' : 'on') : ''}"></i>`).join('');
+    const a = d.arch, aTotal = archScore(d), l = d.land, lTotal = landScore(d);
+    const sub = (k,v) => `<span class="sub-score"><b>${k}</b>${v}</span>`;
     const nightsNote = state.mode==='split' ? ` · ${Math.min(state.sig, state.nights-(d.air||0))} signature nights`
-                     : state.mode==='design' ? ' · design every night' : ' · good rooms throughout';
+                     : state.mode==='design' ? ' · comfort every night' : ' · good rooms throughout';
     return `<article class="card ${over?'flag-over':'flag-under'}" id="card-${d.id}">
       <p class="ctag">${d.tag}</p>
       <h3>${d.name}</h3>
       <p class="sub">${d.sub}</p>
-      <p class="big ${over?'over':'under'}">${money(c.total)}</p>
+      <p class="big ${over?'over':'under'}">${money(c.total)} <i class="rank inline">#${COST_RANK[d.id]} cheapest</i></p>
       <p class="delta">${over ? money(gap)+' over the ceiling' : money(gap)+' left over'}${nightsNote}${d.air?' · '+c.days+' days on the ground':''}</p>
       <div class="dials">
-        <div class="dial"><b>Architecture</b><span class="pips">${pips(d.arch,false)}</span></div>
-        <div class="dial"><b>Weather odds</b><span class="pips">${pips(d.wx,true)}</span></div>
-        <div class="dial"><b>Daytime</b><em>${d.heat}°C</em></div>
+        <div class="dial dial-arch">
+          <b>Architecture <i class="rank">#${ARCH_RANK[d.id]}</i></b>
+          <em class="score">${aTotal}<i>/30</i></em>
+          <span class="subs">${sub('Stay',a.s)}${sub('Visit',a.v)}${sub('Fabric',a.f)}</span>
+        </div>
+        <div class="dial dial-arch">
+          <b>Landscape &amp; doing <i class="rank">#${LAND_RANK[d.id]}</i></b>
+          <em class="score">${lTotal}<i>/30</i></em>
+          <span class="subs">${sub('Scenery',l.s)}${sub('Doing',l.d)}${sub('Off-radar',l.q)}</span>
+        </div>
+        <div class="dial">
+          <b>Weather odds</b>
+          <em class="score small">${d.wx}<i>/5</i></em>
+          <span class="pips">${pips(d.wx,true)}</span>
+        </div>
+        <div class="dial">
+          <b>Daytime <i class="rank">#${HEAT_RANK[d.id]}</i></b>
+          <em class="score small">${d.heat}<i>°C</i></em>
+        </div>
       </div>
       <p class="wxline">${d.wxLine}</p>
       <p class="note">${d.note}</p>
+      <div class="stays tours"><h4>Worth doing</h4>
+        ${d.tours.map(s => `<div class="stay"><strong>${s.n}</strong><span>${s.a}</span></div>`).join('')}
+      </div>
+      <div class="stays spots"><h4>Worth finding</h4>
+        ${d.spots.map(s => `<div class="stay"><strong>${s.n}</strong><p>${s.d}</p></div>`).join('')}
+      </div>
       <div class="stays"><h4>Where you'd stay</h4>
         ${d.stays.map(s => `<div class="stay"><strong>${s.n}</strong><span>${s.a}</span><p>${s.d}</p></div>`).join('')}
       </div>
@@ -612,6 +997,7 @@ function renderCards(list){
 
 function render(){
   document.getElementById('sigOut').textContent = state.sig;
+  refreshCostRank();
   const list = visible();
   renderRail(list); renderCards(list);
 }
@@ -637,6 +1023,16 @@ document.getElementById('stepSig').addEventListener('click', e => {
   render();
 });
 document.getElementById('buffer').addEventListener('change', e => { state.buffer = e.target.checked; render(); });
+
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  [...document.getElementById('segTheme').children].forEach(b =>
+    b.setAttribute('aria-pressed', b.dataset.theme === t ? 'true' : 'false'));
+}
+document.getElementById('segTheme').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (b) setTheme(b.dataset.theme);
+});
+setTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 render();
 </script>
 </body>
