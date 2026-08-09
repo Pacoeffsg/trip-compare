@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pascal &amp; Ale · September Holiday Shortlist</title>
-<meta name="description" content="Pascal and Ale's interactive September 2026 holiday comparison from Sydney, with a A$10,000 budget.">
+<meta name="description" content="Pascal and Ale's 12–26 September 2026 holiday comparison from Sydney, on a A$10,000 budget.">
 <meta name="theme-color" content="#0C1F33">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pascal &amp; Ale · September Holiday Shortlist">
@@ -206,7 +206,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .stays{margin:0 0 14px;border-top:1px dashed var(--line);padding-top:12px}
 .stays h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold);margin:0 0 9px;font-weight:500}
-.links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:5px}
+.links{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:5px}
 .links a{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
   color:var(--aqua);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--aqua) 40%, transparent);
   padding-bottom:1px;transition:color .15s,border-color .15s}
@@ -214,14 +214,33 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .spots h4{color:var(--aqua)}
 .tours h4{color:var(--c-day)}
 .moving h4{color:var(--c-move)}
-.moving .stay p{margin:0}
+.leg{border:1px solid color-mix(in srgb, var(--coral) 45%, transparent);border-radius:3px;padding:14px 16px;
+  margin:0 0 14px;background:color-mix(in srgb, var(--coral) 6%, transparent)}
+.leg.on{border-color:var(--coral)}
+.leg-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;margin-bottom:9px}
+.leg-head h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral);margin:0;font-weight:500}
+.leg-head label{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--text-2);cursor:pointer}
+.leg-head input{accent-color:var(--coral);width:15px;height:15px}
+.leg p{margin:0 0 8px;font-size:.8rem;color:var(--text-2);line-height:1.5}
+.leg-adv strong{color:var(--coral);font-weight:600}
+.leg-cost{font-family:var(--mono);font-size:.72rem;color:var(--sand-dim)!important;margin-bottom:0!important}
+.leg-cost a{color:var(--gold);text-decoration:none;margin-left:10px;white-space:nowrap;
+  border-bottom:1px solid color-mix(in srgb, var(--gold) 45%, transparent)}
+.moving .stay{grid-template-columns:1fr}
+.moving .stay p{margin:0;grid-column:1}
 .tours .stay{margin-bottom:6px}
 .tours .stay span{color:var(--c-day)}
-.spots .stay{grid-template-columns:1fr}
-.stay{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin-bottom:9px}
-.stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em}
-.stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap}
-.stay p{grid-column:1/-1;margin:1px 0 0;font-size:.78rem;color:var(--sand-dim);line-height:1.45}
+
+.stay{display:grid;grid-template-columns:72px 1fr auto;gap:3px 12px;margin-bottom:13px;align-items:start}
+.thumb{grid-row:1 / span 3;width:72px;height:72px;transition:filter .2s;border-radius:3px;background-size:cover;
+  background-position:center;background-color:var(--surf-4);position:relative;overflow:hidden}
+.thumb.empty::after{content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(135deg,var(--surf-5) 0 3px,transparent 3px 8px);opacity:.5}
+.thumb.loaded{background-color:transparent}
+.stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em;grid-column:2}
+.stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap;grid-column:3}
+.stay p{grid-column:2/-1;margin:1px 0 0;font-size:.78rem;color:var(--sand-dim);line-height:1.45}
 .meters{margin:0 0 13px;display:flex;flex-direction:column;gap:6px}
 .meter{display:grid;grid-template-columns:64px 1fr 62px;align-items:center;gap:9px;font-family:var(--mono);
   font-size:9.5px;color:var(--sand-dim)}
@@ -231,6 +250,43 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .meter em{font-style:normal;text-align:right;color:var(--sand)}
 .card p.note{font-size:.85rem;color:var(--text-2);margin:0 0 12px;line-height:1.48}
 .watch{font-size:.79rem;color:var(--coral);border-left:2px solid color-mix(in srgb, var(--coral) 55%, transparent);padding:2px 0 2px 10px;margin-top:auto}
+.itin-tabs{display:flex;gap:0;margin-top:22px;border:1px solid var(--line);border-radius:2px;
+  overflow:hidden;width:fit-content;max-width:100%}
+.itin-tabs button{appearance:none;border:0;border-right:1px solid var(--line);background:transparent;
+  color:var(--sand-dim);font-family:var(--body);font-size:.88rem;font-weight:500;padding:9px 18px;cursor:pointer}
+.itin-tabs button:last-child{border-right:0}
+.itin-tabs button[aria-pressed="true"]{background:var(--gold);color:var(--chip-fg);font-weight:600}
+.itin{border:1px solid var(--line);border-radius:4px;margin-top:18px;overflow:hidden}
+.itin-head{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;justify-content:space-between;
+  padding:18px 20px;background:var(--tint-gold);border-bottom:1px solid var(--line)}
+.itin-head h3{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.025em;margin:0}
+.itin-head p{margin:4px 0 0;font-family:var(--mono);font-size:.75rem;color:var(--sand-dim)}
+.itin-head span{font-family:var(--mono);font-size:1.25rem;font-weight:700;color:var(--gold);letter-spacing:-.03em}
+.itin-open{margin:0;padding:15px 20px;font-size:.86rem;color:var(--text-2);border-bottom:1px solid var(--line);line-height:1.5}
+.itin-days{list-style:none;margin:0;padding:0}
+.itin-days li{display:grid;grid-template-columns:232px 1fr;gap:18px;padding:15px 20px;border-bottom:1px solid var(--line)}
+.thumb.wide{grid-row:auto;width:100%;height:150px;margin-bottom:10px;border-radius:3px}
+.thumb.wide.loaded{box-shadow:0 1px 0 var(--line)}
+.itin-days li:hover .thumb.wide.loaded{filter:saturate(1.06)}
+.dphoto{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--aqua);
+  text-decoration:none;display:inline-block;margin-top:6px;
+  border-bottom:1px solid color-mix(in srgb, var(--aqua) 40%, transparent)}
+.dphoto:hover{color:var(--gold);border-color:var(--gold)}
+.dcol i.stayline{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;
+  color:var(--sand-dim);margin-top:5px;line-height:1.4}
+.dcol b{display:block;font-family:var(--mono);font-size:.76rem;color:var(--gold);letter-spacing:.05em}
+.dcol em{display:block;font-style:normal;font-weight:600;font-size:.92rem;letter-spacing:-.015em;margin-top:3px;line-height:1.2}
+.dcol i{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;color:var(--sand-dim);margin-top:5px;line-height:1.4}
+.itin-days p{margin:0;font-size:.87rem;color:var(--text-2);line-height:1.55}
+.itin-money{padding:17px 20px;border-bottom:1px solid var(--line)}
+.itin-money h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--c-move);margin:0 0 11px;font-weight:500}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:11px 20px}
+.mgrid span{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:.78rem;
+  border-bottom:1px dotted var(--line);padding-bottom:5px}
+.mgrid b{font-weight:400;color:var(--sand-dim)}
+.itin-verdict{margin:0;padding:17px 20px;font-size:.88rem;color:var(--text-2);line-height:1.55;background:var(--surf-1)}
+@media (max-width:720px){.itin-days li{grid-template-columns:1fr;gap:8px}}
 .callout{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:3px;padding:22px 24px;
   margin:44px 0 0;background:var(--tint-gold)}
 .callout h3{font-family:var(--display);font-weight:700;font-size:1.12rem;margin:0 0 9px;letter-spacing:-.02em}
@@ -265,12 +321,12 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
       <button data-theme="light" aria-pressed="false">Light</button>
     </div>
   </div>
-  <p class="eyebrow">Pascal &amp; Ale · departing Sydney · 12–23 September 2026</p>
+  <p class="eyebrow">Pascal &amp; Ale · departing Sydney · 12–26 September 2026</p>
   <h1>Somewhere hot, with a view, and a room <em>worth waking up in.</em></h1>
-  <p class="standfirst">Eleven nights, the two of you, and $10,000. A room that's actually designed costs about double a merely good one, so the real question isn't where you can afford to go — it's how many nights of proper architecture the budget buys once the flights are paid for. Switch strategies below and watch the answer move.</p>
+  <p class="standfirst">Fourteen nights, the two of you, and $10,000. A room that's actually designed costs about double a merely good one, so the real question isn't where you can afford to go — it's how many nights of proper architecture the budget buys once the flights are paid for. Switch strategies below and watch the answer move.</p>
   <dl class="spec">
     <div><dt>Departs</dt><dd>Sat 12 Sep</dd></div>
-    <div><dt>Returns</dt><dd>Wed 23 Sep</dd></div>
+    <div><dt>Returns</dt><dd>Sat 26 Sep</dd></div>
     <div><dt>Ceiling</dt><dd>$10,000</dd></div>
     <div><dt>Currency</dt><dd>AUD, both people</dd></div>
     <div><dt>Non-negotiable</dt><dd>Heat, views, design</dd></div>
@@ -369,19 +425,30 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
   <div class="grid" id="grid"></div>
   <p class="grid-note">Tick up to three to compare them side by side. Tap a card to open the full detail.</p>
 
+  <div class="section-head" style="margin-top:62px">
+    <h2>The two finalists, day by day</h2>
+    <p>Written against your actual dates. Room rates are per night for two; activity prices are for both of you.</p>
+  </div>
+  <div class="itin-tabs" id="itinTabs">
+    <button data-itin="turkiye" aria-pressed="true">Türkiye</button>
+    <button data-itin="vietnam-n" aria-pressed="false">Northern Vietnam</button>
+  </div>
+  <div id="itinOut"></div>
+
   <div class="callout">
     <h3>The one number that decides this trip</h3>
-    <p><strong>A design-led room runs roughly double an ordinary good one</strong> — around $400–500 a night against $200–250 in most of these places, and more in Japan. Over eleven nights that difference is about $2,500, which is a quarter of the entire budget. Nowhere with an expensive flight survives paying it every night.</p>
+    <p><strong>A design-led room runs roughly double an ordinary good one</strong> — around $400–500 a night against $200–250 in most of these places, and more in Japan. Over fourteen nights that difference is about $2,500, which is a quarter of the entire budget. Nowhere with an expensive flight survives paying it every night.</p>
     <p><strong>Which is why split stay is the setting that matters.</strong> Four nights in the building you actually came for, the rest in something clean and well-located, is how you get a Barrocal or an Argos into a $10k trip. Put the signature nights in the middle, not at the start — you'll be too jet-lagged to look at anything properly on night one.</p>
-    <p><strong>Your dates still carry three complications in Japan:</strong> Silver Week runs 19–23 September, the first full one since 2015, and your last five nights sit inside it. The Asian Games open in Aichi–Nagoya on 19 September. And mid-September is peak typhoon season in Okinawa, which averages about 7.7 approaches a year against three or four for the mainland.</p>
+    <p><strong>Your dates still carry three complications in Japan:</strong> Silver Week runs 19–23 September, the first full one since 2015, and now sits in the middle of the trip rather than at the end — which is marginally better, since you can put the quiet regions either side of it. The Asian Games open in Aichi–Nagoya on 19 September and run past your return. And mid-September is peak typhoon season in Okinawa, which averages about 7.7 approaches a year against three or four for the mainland.</p>
   </div>
 
   <footer>
     <h4>Where the numbers come from</h4>
     <ul>
-      <li><strong>The links</strong> — each property links to a name search, a Booking.com results page with 12–23 September and two guests already filled in, and a map pin. They're built from the property name rather than saved deep links, so they can't rot or point somewhere stale — but always confirm you've landed on the right property before paying, especially for the smaller places where names repeat.</li>
+      <li><strong>The images</strong> — photographs come from Wikimedia Commons, fetched at page load. Each itinerary day is pinned to a specific Commons article rather than guessed from a name search, so Hagia Sophia, Ephesus, Tràng An, Lan Hạ and Sa Pa all resolve to the real place. Accommodation and smaller spots still use a name search, and a specific guesthouse generally won't have an article — those show a hatched placeholder with a <em>Photos</em> link beside them, which always works. Images are used under the Commons licences the individual photographers applied; if you publish this page anywhere public, credit Wikimedia Commons in the footer. Nothing is stored in the file, so nothing can rot — but a preview that blocks outbound requests, or being offline, will show placeholders throughout.</li>
+      <li><strong>The links</strong> — each property links to a name search, a Booking.com results page with 12–26 September and two guests already filled in, and a map pin. They're built from the property name rather than saved deep links, so they can't rot or point somewhere stale — but always confirm you've landed on the right property before paying, especially for the smaller places where names repeat.</li>
       <li><strong>Rooms</strong> — signature rates are the published or recently observed nightly price for the named properties — Argos in Cappadocia from roughly US$273–330, Hoshinoya Taketomi across a 2026 band of about US$268–871 with US$746 seen mid-year, and comparable figures elsewhere. Ordinary rates now reflect whole-place rentals and family guesthouses rather than hotels, which is why most totals fell against earlier versions — self-catering also quietly removes a chunk of the daily food line in the expensive destinations. Tokyo's citywide average ran about ¥33,000 in May 2026, up nearly 13% year on year.</li>
-      <li><strong>Flights — shortest routing only.</strong> Every fare here assumes a direct service where one exists, and a single stop otherwise. No two- and three-stop budget routings are priced, which raises several numbers against earlier versions: Okinawa moves from a $852 Scoot itinerary via Taipei to about $1,600 through Tokyo, and Athens from a sub-$1,300 27-hour Scoot routing to about $2,200 on a Gulf carrier. Albania is the one destination with no single-stop option at all, and is priced and flagged as two stops. Every card links straight to Google Flights for SYD to that airport, with 12–23 September and two adults already in the query — direct-only where a nonstop exists. Underlying anchors, quoted for these dates in early August 2026: Sydney–Nadi from about $386 return for 13–22 September; Sydney–Okinawa around $852 via Taipei; JAL Sydney–Tokyo from about $2,033 for September. Europe sits in a $1,800–2,500 shoulder band, with sub-$1,300 fares available on 27–43 hour routings.</li>
+      <li><strong>Flights — shortest routing only.</strong> Every fare here assumes a direct service where one exists, and a single stop otherwise. No two- and three-stop budget routings are priced, which raises several numbers against earlier versions: Okinawa moves from a $852 Scoot itinerary via Taipei to about $1,600 through Tokyo, and Athens from a sub-$1,300 27-hour Scoot routing to about $2,200 on a Gulf carrier. Albania is the one destination with no single-stop option at all, and is priced and flagged as two stops. Every card links straight to Google Flights for SYD to that airport, with 12–26 September and two adults already in the query — direct-only where a nonstop exists. Underlying anchors, quoted for these dates in early August 2026: Sydney–Nadi from about $386 return for 13–22 September; Sydney–Okinawa around $852 via Taipei; JAL Sydney–Tokyo from about $2,033 for September. Europe sits in a $1,800–2,500 shoulder band, with sub-$1,300 fares available on 27–43 hour routings.</li>
       <li><strong>Getting around inside the country</strong> — costed as its own line rather than lumped into a general allowance: domestic flights, trains, ferries, rental cars with fuel, and airport transfers, priced for two. Earlier versions bundled this with activities in a single figure that was, in several cases, smaller than the listed activities alone. The Rarotonga–Aitutaki hop is about $900 for two on its own; eleven days of car in British Columbia is roughly $1,750 with fuel and the island ferry.</li>
       <li><strong>Activities</strong> — the sum of the excursions listed on each card, so the number you see is the number you're being charged for. Anything you skip comes straight back off the total.</li>
       <li><strong>Daily spend</strong> — food, city transit, entries and incidentals per person per day. City metros and taxis sit here; anything between cities sits in the line above.</li>
@@ -441,6 +508,15 @@ const DEST = [
       {n:'Ihlara Valley', d:'A sixteen-kilometre gorge walk past Byzantine chapels along a river.'},
       {n:'Kayaköy', d:'An abandoned Greek hill town above Fethiye, roofless and enormous.'}
     ],
+    leg:{
+      name:'Beirut, Byblos &amp; the Chouf', nights:4,
+      flight:450, mid:140, daily:95, internal:250,
+      route:'İstanbul→Beirut · 2h05 · MEA, Turkish, Pegasus',
+      advisory:'Smartraveller: DO NOT TRAVEL. Raised 28 February 2026 over the volatile security situation and military strikes; last updated 14 July 2026. Australians already in Lebanon are advised to leave while commercial flights run.',
+      practical:'Beirut airport is open and the terminal functioning, but July capacity ran about 20% below normal and airspace can close at short notice. MEA and Royal Jordanian have been the most consistent operators. A Level 4 advisory voids most standard travel insurance — check whether yours excludes only the Lebanon days or the entire trip, because some do the latter.',
+      stays:'Whole-apartment rentals in Mar Mikhaël or Gemmayzeh run about $140 a night — 1930s buildings with tiled floors, triple-arch windows and a balcony.',
+      doing:'Beirut\'s Ottoman-French fabric and the National Museum, Byblos harbour, and the Chouf cedar reserve on a driver day. The Beqaa, Baalbek, Tripoli, the southern suburbs and all areas south of Saida carry separate all-travel warnings.'
+    },
     watch:'İstanbul needs four nights minimum. Don\'t add a third region — pick Cappadocia or the Aegean, not both.'
   },
   {
@@ -540,7 +616,7 @@ const DEST = [
       {n:'Bouma Falls, Taveuni', d:'Three tiers, a forest walk between them, almost no one.'},
       {n:'Sabeto hot springs', d:'Volcanic mud pools inland from Nadi — unglamorous and excellent.'}
     ],
-    watch:'Resort food and drink is the quiet budget killer. Half-board beats à la carte over eleven nights.'
+    watch:'Resort food and drink is the quiet budget killer. Half-board beats à la carte over fourteen nights.'
   },
   {
     id:'andalusia', name:'Seville, Granada &amp; Málaga', tag:'Europe · Spain', groups:['europe'], air:2,
@@ -590,7 +666,7 @@ const DEST = [
       {n:'Ōhara', d:'Moss gardens forty minutes north, with a fraction of Arashiyama\'s crowd.'},
       {n:'Nakasendō, Magome–Tsumago', d:'Eight kilometres of preserved post road through the Kiso valley.'}
     ],
-    watch:'Silver Week, 19–23 September, covers your last five nights. Reserve shinkansen seats the day booking opens.'
+    watch:'Silver Week, 19–23 September, now falls mid-trip. Put Kyoto either side of it and reserve shinkansen seats the day booking opens.'
   },
   {
     id:'balkans', name:'Albania &amp; the Montenegrin coast', tag:'Europe · Adriatic', groups:['europe'], air:2,
@@ -639,7 +715,7 @@ const DEST = [
       {n:'Monsaraz', d:'A walled hill town over the Alqueva reservoir, one of Europe\'s darkest skies.'},
       {n:'Benagil by kayak', d:'Paddle in rather than queue for a boat — the only civilised way to see it.'}
     ],
-    watch:'26–30 hours door to door each way. Eight full days on the ground out of eleven nights.'
+    watch:'26–30 hours door to door each way. Eight full days on the ground out of fourteen nights.'
   },
   {
     id:'vietnam-n', name:'Hanoi, Ninh Bình &amp; Hạ Long', tag:'Southeast Asia', groups:[], air:0,
@@ -858,18 +934,67 @@ const DEST = [
   }
 ];
 
-const state = {mode:'split', sig:4, filter:'all', sort:'fit', compare:[], jpBias:false, nights:11, travellers:2, buffer:true, ceiling:10000};
+
+const ITIN = {
+  turkiye: {
+    label:'Türkiye', total:'≈$11,750', shape:'12 nights on the ground · İstanbul 5 · Cappadocia 4 · Aegean 3',
+    open:'Depart Sydney Sat 12 Sep, one stop, land İstanbul Sunday morning the 13th. Home overnight Fri 25 Sep, into Sydney on the 26th.',
+    days:[
+      {w:'Hagia Sophia', d:'Sun 13 Sep', p:'İstanbul', s:'Galata top-floor flat · $180', a:'Land, sleep an hour, then plan nothing. Walk down through Karaköy to the water, eat at a meyhane, go to bed early. Jet lag is the whole day.'},
+      {w:'Süleymaniye Mosque', d:'Mon 14 Sep', p:'İstanbul · Sultanahmet', s:'Galata flat', a:'Hagia Sophia at opening, before the coaches. Basilica Cistern, then the Blue Mosque between prayers. Afternoon: Süleymaniye, the better building and half as crowded — Sinan\'s section is worth an hour on its own.'},
+      {w:'Bosphorus', d:'Tue 15 Sep', p:'İstanbul · the Bosphorus', s:'Galata flat', a:'Topkapı early, then the Archaeological Museum in the same grounds. Afternoon: the public ferry to Anadolu Kavağı, 90 minutes each way for about $10 for two. Hamam at Kılıç Ali Paşa in the evening.'},
+      {w:'Chora Church', d:'Wed 16 Sep', p:'İstanbul · Chora &amp; the walls', s:'Galata flat', a:'Chora for the mosaics, then walk the Theodosian walls at Edirnekapı and down through Balat and Fener — the best street in the city for doing nothing.'},
+      {w:'Kadıköy', d:'Thu 17 Sep', p:'İstanbul · Kadıköy &amp; the islands', s:'Galata flat', a:'Ferry to Kadıköy for the fish market and Moda, or the longer run to Büyükada where there are no cars. The extra night the longer trip buys you, and İstanbul absorbs it easily.'},
+      {w:'Uçhisar', d:'Fri 18 Sep', p:'→ Cappadocia · Uçhisar', s:'Cave house, Uçhisar · $220', a:'Morning flight İstanbul→Kayseri, about $60 each. Hire car, an hour to Uçhisar. Afternoon: Göreme Open Air Museum, sunset from Uçhisar castle with the valleys going pink beneath you.'},
+      {w:'Cappadocia', d:'Sat 19 Sep', p:'Cappadocia · dawn', s:'Cave house', a:'Balloon at first light, $700 for the two of you. Book it weeks ahead. Back for breakfast, then sleep. Afternoon: Red and Rose Valley between Çavuşin and Göreme, three hours, empty after four.'},
+      {w:'Göreme', d:'Sun 20 Sep', p:'Cappadocia · the quiet end', s:'Cave house', a:'Drive south to Soğanlı — rock-cut churches an hour past Göreme, usually nobody there. Avanos for pottery on the way back, and the Derinkuyu underground city if the weather turns.'},
+      {w:'Ihlara Valley', d:'Mon 21 Sep', p:'Cappadocia · Ihlara', s:'Cave house', a:'The Ihlara gorge walk, sixteen kilometres along a river past Byzantine chapels, or a shorter loop from Belisırma. Selime monastery at the end. A whole day and worth it.'},
+      {w:'Alaçatı', d:'Tue 22 Sep', p:'→ Aegean · Alaçatı', s:'Stone cottage, Alaçatı · $190', a:'Fly Kayseri→İzmir, about $70 each, hire car, an hour west. Alaçatı is Ottoman-Greek masonry with blue shutters and a proper market. Swim at Çeşme — the sea is at its warmest all year.'},
+      {w:'Ephesus', d:'Wed 23 Sep', p:'Ephesus &amp; Şirince', s:'Stone cottage', a:'Ephesus at opening for the Library of Celsus and the Terrace Houses, which cost extra and are the reason to come. Şirince for lunch and the hill church.'},
+      {w:'Çeşme', d:'Thu 24 Sep', p:'Aegean · nothing much', s:'Stone cottage', a:'One deliberately empty day. Çeşme beaches, a boat if you want one, and a long lunch. Evening flight İzmir→İstanbul, last night near the airport or back in Galata.'},
+      {w:'Grand Bazaar, Istanbul', d:'Fri 25 Sep', p:'İstanbul → home', s:'—', a:'Spice Market and the Grand Bazaar for things to carry home, a last lunch in Karaköy, evening long-haul.'}
+    ],
+    money:[['International flights','$4,000'],['Rooms, 12 nights','$2,320'],['Food &amp; daily life','$2,600'],['Internal flights &amp; cars','$700'],['Activities','$900'],['Insurance &amp; contingency','$1,230']],
+    verdict:'The three extra nights push this to about $11,750 — roughly $1,750 over. Two ways back: drop the Aegean entirely for İstanbul and Cappadocia only, which saves a flight, three days of car and about $1,300; or keep all three regions and take good rooms throughout instead of four signature nights, worth about $640. Doing both lands you near $9,800.'
+  },
+  'vietnam-n': {
+    label:'Northern Vietnam', total:'≈$8,950', shape:'14 nights on the ground · Hanoi 3 · Ninh Bình 3 · Lan Hạ &amp; Cát Bà 3 · Sa Pa 4 · Hanoi 1',
+    open:'Direct Sydney→Hanoi, about 9h30. Leave Sat 12 Sep morning, land that afternoon. Fly home Sat 26 Sep. No night lost to the aircraft in either direction, which is worth more on a longer trip, not less.',
+    days:[
+      {w:'Hanoi', d:'Sat 12 Sep', p:'Hanoi · Old Quarter', s:'Tube-house apartment · $130', a:'Land mid-afternoon. Walk to Hoàn Kiếm, bia hơi on a plastic stool at Tạ Hiện, bún chả for dinner. You eat better on night one here than anywhere else on this list.'},
+      {w:'Temple of Literature, Hanoi', d:'Sun 13 Sep', p:'Hanoi', s:'Tube-house apartment', a:'Temple of Literature at opening. The French Quarter — Opera House, the Metropole, the villas along Trần Hưng Đạo. Then the Museum of Ethnology, the best museum in the country and the one everyone skips. Street-food walk in the evening, $90 for two.'},
+      {w:'Long Biên Bridge', d:'Mon 14 Sep', p:'Hanoi · the other side', s:'Tube-house apartment', a:'Imperial Citadel and the B-52 museum. Long Biên bridge at golden hour — Eiffel\'s company built it and it still carries trains. Sunset over Tây Hồ, dinner at a lakeside quán.'},
+      {w:'Hang Múa', d:'Tue 15 Sep', p:'→ Ninh Bình', s:'Bamboo bungalow · $170', a:'Private transfer, two hours, about $120. Afternoon: the five hundred steps up Hang Múa for the dragon ridge over the paddies. Go late — better light, survivable heat.'},
+      {w:'Tam Cốc-Bích Động', d:'Wed 16 Sep', p:'Ninh Bình · Tam Cốc', s:'Bamboo bungalow', a:'Rowboat through Tam Cốc at 7am before the buses, $60 for two, and the rowers use their feet. Bích Động pagoda after. Afternoon by bicycle through the karsts to Hoa Lư, the 10th-century capital.'},
+      {w:'Tràng An', d:'Thu 17 Sep', p:'Ninh Bình · Tràng An', s:'Bamboo bungalow', a:'Tràng An route three — three hours, nine caves, grander and quieter than Tam Cốc. Cúc Phương national park in the afternoon for jungle and langurs.'},
+      {w:'Lan Ha Bay', d:'Fri 18 Sep', p:'→ Lan Hạ Bay', s:'Junk cabin · $260', a:'Transfer to Hải Phòng, three hours, board at midday. Lan Hạ has the same karsts as Hạ Long with a tenth of the boats. Kayak in the afternoon, swim off the back, eat on deck.'},
+      {w:'Hạ Long Bay', d:'Sat 19 Sep', p:'Lan Hạ Bay', s:'Junk cabin', a:'Dark and Bright Cave by kayak at dawn, then Việt Hải village on Cát Bà by bicycle. Second night at anchor somewhere with no other boats in sight.'},
+      {w:'Cát Bà Island', d:'Sun 20 Sep', p:'Cát Bà island', s:'Cát Bà guesthouse · $120', a:'Disembark and stay rather than rush back — the national park has a proper climb up Ngự Lâm peak, and the beaches on the east side empty out by four. The extra night the longer trip buys you.'},
+      {w:'Sa Pa', d:'Mon 21 Sep', p:'→ Sa Pa', s:'Valley homestay, Tả Van · $110', a:'Ferry and transfer to Hanoi, then the expressway to Sa Pa, about 5h30 by limousine bus. Stay down in the Muong Hoa valley at Tả Van, not up in Sa Pa town, which has been overbuilt.'},
+      {w:'Mường Hoa Valley', d:'Tue 22 Sep', p:'Sa Pa · Muong Hoa valley', s:'Valley homestay', a:'This is why you come in September. The rice terraces are at full harvest gold and it lasts about three weeks. Walk Lao Chải to Tả Van with a Hmong guide, six hours, roughly $80 for two.'},
+      {w:'Fansipan', d:'Wed 23 Sep', p:'Sa Pa · higher up', s:'Valley homestay', a:'Y Linh Hồ and Giàng Tả Chải on foot, or the cable car toward Fansipan if it is clear. Afternoon in the villages when the day-trippers have gone back up the hill.'},
+      {w:'Bắc Hà District', d:'Thu 24 Sep', p:'Sa Pa · Bắc Hà or rest', s:'Valley homestay', a:'If it is a Sunday-market week, Bắc Hà is three hours east and the best market in the north. Otherwise a slow day — this is the point of fourteen nights rather than eleven.'},
+      {w:'Hanoi', d:'Fri 25 Sep', p:'→ Hanoi', s:'Tube-house apartment · $130', a:'Afternoon bus back. Last night in Hanoi, egg coffee at Giảng, and whatever you did not get to eat the first time.'},
+      {w:'Noi Bai International Airport', d:'Sat 26 Sep', p:'→ home', s:'—', a:'Direct flight to Sydney. You land the same day, which is the quiet luxury of this option.'}
+    ],
+    money:[['International flights','$2,200'],['Rooms, 14 nights','$2,160'],['Food &amp; daily life','$2,400'],['Internal transfers','$360'],['Activities','$850'],['Insurance &amp; contingency','$1,160']],
+    verdict:'Fits at about $8,950 with roughly $1,050 spare, and the extra three nights go into slowing down rather than adding a fifth region — a night on Cát Bà instead of a rushed transfer, and a fourth day in the Sa Pa valleys. The trade against Türkiye is architecture, 17/30 against 28, and humidity: this is the tail of the wet season and you will be damp.'
+  }
+};
+
+const state = {mode:'split', sig:4, filter:'all', sort:'fit', compare:[], jpBias:false, beirut:false, nights:14, travellers:2, buffer:true, ceiling:10000};
 const money = n => '$' + Math.round(n).toLocaleString('en-AU');
 const archScore = d => d.arch.s + d.arch.v + d.arch.f;
 const landScore = d => d.land.s + d.land.d + d.land.q;
 const clamp = (v) => Math.max(0, Math.min(1, v));
 
-const CHECKIN = '2026-09-12', CHECKOUT = '2026-09-23';
+const CHECKIN = '2026-09-12', CHECKOUT = '2026-09-26';
 const clean = s => s.replace(/&amp;/g,'&').replace(/&#39;/g,"'");
 const findUrl  = n => 'https://www.google.com/search?q=' + encodeURIComponent(clean(n) + ' hotel');
 const ratesUrl = n => 'https://www.booking.com/searchresults.html?ss=' + encodeURIComponent(clean(n))
   + '&checkin=' + CHECKIN + '&checkout=' + CHECKOUT + '&group_adults=2&no_rooms=1&group_children=0';
 const mapUrl   = n => 'https://www.google.com/maps/search/' + encodeURIComponent(clean(n));
+const photoUrl = q => 'https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(clean(q));
 const staysUrl = n => 'https://www.airbnb.com.au/s/' + encodeURIComponent(clean(n))
   + '/homes?checkin=' + CHECKIN + '&checkout=' + CHECKOUT + '&adults=2';
 const flightsUrl = d => 'https://www.google.com/travel/flights?q=' + encodeURIComponent(
@@ -916,13 +1041,22 @@ function cost(d){
   else { const s = Math.min(state.sig, stayNights); stay = d.design * s + d.mid * (stayNights - s); }
   const flights = d.flight * state.travellers;
   const ground  = d.daily * state.travellers * days;
+  let legCost = 0, stayAdj = 0;
+  if (state.beirut && d.leg){
+    const ln = Math.min(d.leg.nights, Math.max(0, stayNights - (state.mode==='split' ? state.sig : 0)));
+    stayAdj = (d.leg.mid - d.mid) * ln;
+    stay += stayAdj;
+    legCost = d.leg.flight * state.travellers
+            + d.leg.internal * (state.travellers / 2)
+            + (d.leg.daily - d.daily) * state.travellers * ln;
+  }
   const internal = d.internal * (state.travellers / 2);
   const acts     = d.acts * (state.travellers / 2);
-  const extras   = internal + acts;
+  const extras   = internal + acts + legCost;
   const core = flights + stay + ground + extras;
   let insurance = 0, contingency = 0;
   if (state.buffer){ insurance = 90 * state.travellers; contingency = core * 0.10; }
-  return {flights, stay, ground, internal, acts, other: insurance + contingency, days,
+  return {flights, stay, ground, internal, acts, legCost, other: insurance + contingency, days,
           total: core + insurance + contingency};
 }
 
@@ -1107,21 +1241,43 @@ function renderCards(list){
         </div>
       </div>
       <p class="wxline">${d.wxLine}</p>
+      ${d.leg ? `<div class="leg ${state.beirut?'on':''}">
+        <div class="leg-head">
+          <h4>Optional leg · ${d.leg.name}</h4>
+          <label><input type="checkbox" id="legToggle" ${state.beirut?'checked':''}> Add ${d.leg.nights} nights</label>
+        </div>
+        <p class="leg-adv"><strong>${d.leg.advisory}</strong></p>
+        <p>${d.leg.practical}</p>
+        <p>${d.leg.doing}</p>
+        <p>${d.leg.stays}</p>
+        <p class="leg-cost">${d.leg.route} · adds ${money(c.legCost || (d.leg.flight*state.travellers + d.leg.internal + (d.leg.daily-d.daily)*state.travellers*d.leg.nights))} net, taking ${d.leg.nights} nights out of Türkiye rather than adding to the trip
+          <a href="https://www.google.com/travel/flights?q=${encodeURIComponent('Flights from IST to BEY')}" target="_blank" rel="noopener">IST→BEY fares</a>
+          <a href="https://www.smartraveller.gov.au/destinations/middle-east/lebanon" target="_blank" rel="noopener">Smartraveller</a></p>
+      </div>` : ''}
       <div class="stays moving"><h4>Getting around · ${money(c.internal)}</h4>
         <div class="stay"><p>${d.moving}</p></div>
       </div>
       <div class="stays tours"><h4>Worth doing</h4>
-        ${d.tours.map(s => `<div class="stay"><strong>${s.n}</strong><span>${s.a}</span>
-          <nav class="links"><a href="${findUrl(s.n + ' ' + d.tag.split(' · ').pop() + ' tour')}" target="_blank" rel="noopener">Look it up</a></nav>
+        ${d.tours.map(s => `<div class="stay">
+          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
+          <strong>${s.n}</strong><span>${s.a}</span>
+          <nav class="links">
+            <a href="${findUrl(s.n + ' ' + d.tag.split(' · ').pop() + ' tour')}" target="_blank" rel="noopener">Look it up</a>
+            <a href="${photoUrl(s.n + ' ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Photos</a></nav>
         </div>`).join('')}
       </div>
       <div class="stays spots"><h4>Worth finding</h4>
-        ${d.spots.map(s => `<div class="stay"><strong>${s.n}</strong><p>${s.d}</p>
-          <nav class="links"><a href="${mapUrl(s.n + ', ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Map</a></nav>
+        ${d.spots.map(s => `<div class="stay">
+          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
+          <strong>${s.n}</strong><p>${s.d}</p>
+          <nav class="links">
+            <a href="${mapUrl(s.n + ', ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Map</a>
+            <a href="${photoUrl(s.n + ' ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Photos</a></nav>
         </div>`).join('')}
       </div>
       <div class="stays"><h4>Where you'd stay — small, self-contained, mostly host-run</h4>
         ${d.stays.map(s => `<div class="stay">
+          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
           <strong>${s.n}</strong><span>${s.a}</span>
           <p>${s.d}</p>
           <nav class="links">
@@ -1129,6 +1285,7 @@ function renderCards(list){
             <a href="${staysUrl(s.n)}" target="_blank" rel="noopener">Airbnb, your dates</a>
             <a href="${ratesUrl(s.n)}" target="_blank" rel="noopener">Booking, your dates</a>
             <a href="${mapUrl(s.n)}" target="_blank" rel="noopener">Map</a>
+            <a href="${photoUrl(s.n + ' ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Photos</a>
           </nav>
         </div>`).join('')}
       </div>
@@ -1139,10 +1296,20 @@ function renderCards(list){
     </article>`;
   }).join('');
 
+  const lt = document.getElementById('legToggle');
+  if (lt) lt.addEventListener('change', e => {
+    state.beirut = e.target.checked;
+    const card = document.getElementById('card-turkiye');
+    const wasOpen = card && card.classList.contains('open');
+    render();
+    if (wasOpen){ const c2 = document.getElementById('card-turkiye');
+      if (c2){ c2.classList.add('open'); const b = c2.querySelector('.more'); if (b) b.textContent = 'Hide details'; } }
+  });
   grid.querySelectorAll('.more').forEach(b => b.addEventListener('click', () => {
     const card = document.getElementById('card-' + b.dataset.open);
     const open = card.classList.toggle('open');
     b.textContent = open ? 'Hide details' : 'View details';
+    if (open) fillThumbs();
   }));
   grid.querySelectorAll('[data-cmp]').forEach(i => i.addEventListener('change', e => {
     const id = e.target.dataset.cmp;
@@ -1152,12 +1319,103 @@ function renderCards(list){
   }));
 }
 
+let itinPick = 'turkiye';
+function renderItin(){
+  const t = ITIN[itinPick];
+  document.getElementById('itinOut').innerHTML = `
+    <div class="itin">
+      <div class="itin-head">
+        <div><h3>${t.label}</h3><p>${t.shape}</p></div>
+        <span>${t.total}</span>
+      </div>
+      <p class="itin-open">${t.open}</p>
+      <ol class="itin-days">
+        ${t.days.map(x => `<li>
+          <div class="dcol">
+            <i class="thumb wide" ${x.w ? `data-w="${x.w}"` : `data-q="${clean(x.p).replace(/→/g,'').replace(/"/g,'').trim()} ${ITIN[itinPick].label}"`}></i>
+            <b>${x.d}</b><em>${x.p}</em><i class="stayline">${x.s}</i>
+            <a class="dphoto" href="${photoUrl(x.p + ' ' + ITIN[itinPick].label)}" target="_blank" rel="noopener">Photos</a>
+          </div>
+          <p>${x.a}</p>
+        </li>`).join('')}
+      </ol>
+      <div class="itin-money">
+        <h4>Where the money goes</h4>
+        <div class="mgrid">${t.money.map(m => `<span><b>${m[0]}</b>${m[1]}</span>`).join('')}</div>
+      </div>
+      <p class="itin-verdict">${t.verdict}</p>
+    </div>`;
+}
+document.getElementById('itinTabs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  itinPick = b.dataset.itin;
+  [...e.currentTarget.children].forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+  renderItin(); fillThumbs();
+});
+
+const thumbCache = {};
+
+// One batched call for curated article titles, then individual search fallbacks.
+async function wikiByTitles(titles){
+  if (!titles.length) return {};
+  const url = 'https://en.wikipedia.org/w/api.php?action=query&titles='
+    + encodeURIComponent(titles.join('|'))
+    + '&prop=pageimages&piprop=thumbnail&pithumbsize=900&redirects=1&format=json&origin=*';
+  const j = await (await fetch(url)).json();
+  const pages = j?.query?.pages || {}, norm = {}, out = {};
+  (j?.query?.normalized || []).forEach(n => norm[n.to] = n.from);
+  (j?.query?.redirects || []).forEach(n => norm[n.to] = norm[n.from] || n.from);
+  Object.values(pages).forEach(pg => {
+    if (!pg.thumbnail) return;
+    out[pg.title] = pg.thumbnail.source;
+    if (norm[pg.title]) out[norm[pg.title]] = pg.thumbnail.source;
+  });
+  return out;
+}
+
+async function wikiBySearch(q){
+  const url = 'https://en.wikipedia.org/w/api.php?action=query&generator=search'
+    + '&gsrsearch=' + encodeURIComponent(q) + '&gsrlimit=1&prop=pageimages&piprop=thumbnail'
+    + '&pithumbsize=600&format=json&origin=*';
+  const j = await (await fetch(url)).json();
+  return Object.values(j?.query?.pages || {})[0]?.thumbnail?.source || null;
+}
+
+async function fillThumbs(){
+  const nodes = [...document.querySelectorAll('.thumb:not([data-done])')];
+  if (!nodes.length) return;
+  nodes.forEach(n => n.setAttribute('data-done','1'));
+
+  const paint = (el, src) => {
+    if (src){ el.style.backgroundImage = `url("${src}")`; el.classList.add('loaded'); }
+    else el.classList.add('empty');
+  };
+
+  const titled = nodes.filter(n => n.dataset.w);
+  const wanted = [...new Set(titled.map(n => n.dataset.w))].filter(t => !(t in thumbCache));
+  try {
+    for (let i = 0; i < wanted.length; i += 40){
+      const got = await wikiByTitles(wanted.slice(i, i + 40));
+      wanted.slice(i, i + 40).forEach(t => { thumbCache[t] = got[t] || null; });
+    }
+  } catch { wanted.forEach(t => thumbCache[t] = null); }
+  titled.forEach(el => paint(el, thumbCache[el.dataset.w]));
+
+  for (const el of nodes.filter(n => !n.dataset.w)){
+    const q = el.dataset.q;
+    if (q in thumbCache){ paint(el, thumbCache[q]); continue; }
+    try { thumbCache[q] = await wikiBySearch(q); } catch { thumbCache[q] = null; }
+    paint(el, thumbCache[q]);
+  }
+}
+
 function render(){
   document.getElementById('sigOut').textContent = state.sig;
   document.getElementById('sigBtn').textContent = state.sig;
   refreshCostRank();
   const list = visible();
-  renderShortlist(); renderCompare(); renderRail(list); renderCards(list);
+  renderShortlist(); renderCompare(); renderRail(list); renderCards(list); renderItin();
+  fillThumbs();
 }
 
 function wireSeg(id, key){
