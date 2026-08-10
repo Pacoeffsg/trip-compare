@@ -206,7 +206,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .stays{margin:0 0 14px;border-top:1px dashed var(--line);padding-top:12px}
 .stays h4{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold);margin:0 0 9px;font-weight:500}
-.links{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:5px}
+.links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;margin-top:5px}
 .links a{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
   color:var(--aqua);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--aqua) 40%, transparent);
   padding-bottom:1px;transition:color .15s,border-color .15s}
@@ -232,15 +232,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3vw,2rem);l
 .tours .stay{margin-bottom:6px}
 .tours .stay span{color:var(--c-day)}
 
-.stay{display:grid;grid-template-columns:72px 1fr auto;gap:3px 12px;margin-bottom:13px;align-items:start}
-.thumb{grid-row:1 / span 3;width:72px;height:72px;transition:filter .2s;border-radius:3px;background-size:cover;
+.stay{display:grid;grid-template-columns:1fr auto;gap:3px 12px;margin-bottom:12px;align-items:start}
+.thumb{width:72px;height:72px;transition:filter .2s;border-radius:3px;background-size:cover;
   background-position:center;background-color:var(--surf-4);position:relative;overflow:hidden}
 .thumb.empty::after{content:'';position:absolute;inset:0;
   background:repeating-linear-gradient(135deg,var(--surf-5) 0 3px,transparent 3px 8px);opacity:.5}
 .thumb.loaded{background-color:transparent}
-.stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em;grid-column:2}
-.stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap;grid-column:3}
-.stay p{grid-column:2/-1;margin:1px 0 0;font-size:.78rem;color:var(--sand-dim);line-height:1.45}
+.stay strong{font-weight:600;font-size:.86rem;letter-spacing:-.01em;grid-column:1}
+.stay span{font-family:var(--mono);font-size:.75rem;color:var(--gold);white-space:nowrap;grid-column:2}
+.stay p{grid-column:1/-1;margin:1px 0 0;font-size:.78rem;color:var(--sand-dim);line-height:1.45}
 .meters{margin:0 0 13px;display:flex;flex-direction:column;gap:6px}
 .meter{display:grid;grid-template-columns:64px 1fr 62px;align-items:center;gap:9px;font-family:var(--mono);
   font-size:9.5px;color:var(--sand-dim)}
@@ -329,6 +329,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
     <div><dt>Returns</dt><dd>Sat 26 Sep</dd></div>
     <div><dt>Ceiling</dt><dd>$10,000</dd></div>
     <div><dt>Currency</dt><dd>AUD, both people</dd></div>
+    <div><dt>Saved fares</dt><dd><a href="https://www.google.com/travel/flights/s/aZZx3Vaq9xSt4nry9" target="_blank" rel="noopener" style="color:var(--gold)">Google Flights</a></dd></div>
     <div><dt>Non-negotiable</dt><dd>Heat, views, design</dd></div>
   </dl>
 </header>
@@ -359,6 +360,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
         <button data-filter="japan" aria-pressed="false">Japan</button>
         <button data-filter="europe" aria-pressed="false">Europe</button>
         <button data-filter="americas" aria-pressed="false">Americas</button>
+        <button data-filter="oz" aria-pressed="false">Australia</button>
         <button data-filter="scenery" aria-pressed="false">Big landscape</button>
         <button data-filter="offradar" aria-pressed="false">Off-radar</button>
         <button data-filter="direct" aria-pressed="false">Direct only</button>
@@ -388,12 +390,24 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
   </div>
   <div class="shortlist" id="shortlist"></div>
 
+  <div class="section-head" style="margin-top:52px">
+    <h2>The three finalists, day by day</h2>
+    <p>Written against 12–26 September. Room rates are per night for two; activity prices are for both of you. Everything below this is the wider comparison the shortlist came from.</p>
+  </div>
+  <div class="itin-tabs" id="itinTabs">
+    <button data-itin="turkiye" aria-pressed="true">Türkiye</button>
+    <button data-itin="vietnam-n" aria-pressed="false">Northern Vietnam</button>
+    <button data-itin="wa-coral" aria-pressed="false">Western Australia</button>
+  </div>
+  <div id="itinOut"></div>
+
+
   <div class="compare-bar" id="compareBar" hidden></div>
   <div id="compareOut"></div>
 
-  <div class="section-head">
-    <h2>Against the ceiling</h2>
-    <p>Numbered by whichever order you've chosen. Bars crossing the red line need trimming — tap one to jump to the rooms.</p>
+  <div class="section-head" style="margin-top:62px">
+    <h2>Everything else, against the ceiling</h2>
+    <p>All twenty destinations the shortlist was chosen from. Numbered by whichever order you pick; bars crossing the red line need trimming.</p>
   </div>
   <div class="legend">
     <span><i class="swatch" style="background:var(--c-fly)"></i> Flights</span>
@@ -411,7 +425,7 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
 
   <div class="rubric">
     <h3>How the two scores work</h3>
-    <p>Six judgements, each out of ten, in two groups of three. Every rank on this page — cost, architecture, landscape and heat — is against all nineteen destinations, not just the ones currently showing.</p>
+    <p>Six judgements, each out of ten, in two groups of three. Every rank on this page — cost, architecture, landscape and heat — is against all twenty destinations, not just the ones currently showing.</p>
     <div class="rubric-grid">
       <div><h5>Stay <i>/10 · architecture</i></h5><p>Can you sleep in a building worth studying, at a rate this budget survives? A great hotel you can't afford scores low.</p></div>
       <div><h5>Visit <i>/10 · architecture</i></h5><p>Density and quality of buildings you can reach on foot or in a day, weighted toward things that repay a second look.</p></div>
@@ -424,16 +438,6 @@ footer ul{padding-left:16px;margin:0 0 16px;line-height:1.65}
   </div>
   <div class="grid" id="grid"></div>
   <p class="grid-note">Tick up to three to compare them side by side. Tap a card to open the full detail.</p>
-
-  <div class="section-head" style="margin-top:62px">
-    <h2>The two finalists, day by day</h2>
-    <p>Written against your actual dates. Room rates are per night for two; activity prices are for both of you.</p>
-  </div>
-  <div class="itin-tabs" id="itinTabs">
-    <button data-itin="turkiye" aria-pressed="true">Türkiye</button>
-    <button data-itin="vietnam-n" aria-pressed="false">Northern Vietnam</button>
-  </div>
-  <div id="itinOut"></div>
 
   <div class="callout">
     <h3>The one number that decides this trip</h3>
@@ -813,6 +817,33 @@ const DEST = [
     watch:'Groceries and restaurants cost more than Sydney. Self-cater half the trip or this doesn\'t balance.'
   },
   {
+    id:'wa-coral', name:'Perth, Coral Coast &amp; Ningaloo', tag:'Australia · WA', groups:['tropical','oz'], air:0,
+    sub:'Best landscape on the list, worst value',
+    flight:600, stops:0, iata:'PER', route:'Direct · 5h05 · Qantas, Virgin, Jetstar',
+    mid:200, design:340, daily:110, internal:1750, acts:1400,
+    moving:'Fourteen days of car and roughly 2,600km of fuel at remote-roadhouse prices. Perth to Exmouth is 1,270km each way, and there is no alternative to driving it',
+    heat:31, wx:5, arch:{s:4,v:3,f:4}, land:{s:10,d:9,q:7},
+    wxLine:'Dry season, 28–32°C in the north, near-guaranteed sun',
+    note:'September is arguably the best fortnight of the Australian year to be in Western Australia — wildflowers inland, humpbacks offshore, the tail of whale shark season, and Ningaloo reef a hundred metres off an empty beach. It is also the most expensive way to spend two weeks on this entire page, and it is not an architecture trip.',
+    tours:[
+      {n:'Whale shark swim, Ningaloo', a:'$950'},
+      {n:'Kalbarri Skywalk and the gorges', a:'$30'},
+      {n:'Monkey Mia and Shell Beach, Shark Bay', a:'$60'}
+    ],
+    spots:[
+      {n:'Turquoise Bay', d:'Drift snorkel over reef you swim to from the sand. No boat, no tour, no crowd.'},
+      {n:'Yardie Creek', d:'A red gorge cut to the sea in Cape Range, with black-footed rock wallabies on the walls.'},
+      {n:'Hamelin Pool stromatolites', d:'Living structures built by the organisms that first oxygenated the atmosphere. Nothing to look at, and extraordinary.'}
+    ],
+    stays:[
+      {n:'Beach shack, Coral Bay', a:'$240–300', d:'Fibro, a verandah, an outdoor shower, and the reef a hundred metres away. Utterly plain and completely fine.'},
+      {n:'Exmouth townhouse', a:'$200–260', d:'Whole place, kitchen, somewhere to hang wet gear. Book early — the town has very few beds.'},
+      {n:'Kalbarri riverfront house', a:'$160–220', d:'Two bedrooms on the Murchison, pelicans out the front.'},
+      {n:'Sal Salis, Ningaloo', a:'$1,300+', d:'Safari tents in the dunes inside the national park, all meals and activities in. The one memorable building, and priced beyond this trip.'}
+    ],
+    watch:'Accommodation north of Geraldton is scarce and books out months ahead in September. Nothing here is a walk-up.'
+  },
+  {
     id:'cooks', name:'Rarotonga &amp; Aitutaki', tag:'Pacific', groups:['tropical'], air:0,
     sub:'The lagoon, and not much building',
     flight:1400, stops:1, iata:'RAR', route:'1 stop via Auckland · ~9h · Air New Zealand', mid:240, design:400, daily:130, internal:1160, acts:560, moving:'The Rarotonga–Aitutaki return flight, which alone is about $900 for two, plus a scooter on Raro',
@@ -979,6 +1010,29 @@ const ITIN = {
     ],
     money:[['International flights','$2,200'],['Rooms, 14 nights','$2,160'],['Food &amp; daily life','$2,400'],['Internal transfers','$360'],['Activities','$850'],['Insurance &amp; contingency','$1,160']],
     verdict:'Fits at about $8,950 with roughly $1,050 spare, and the extra three nights go into slowing down rather than adding a fifth region — a night on Cát Bà instead of a rushed transfer, and a fourth day in the Sa Pa valleys. The trade against Türkiye is architecture, 17/30 against 28, and humidity: this is the tail of the wet season and you will be damp.'
+  },
+  'wa-coral': {
+    label:'Western Australia', total:'≈$12,290', shape:'14 nights on the ground · Perth 3 · Kalbarri 2 · Shark Bay 2 · Ningaloo 5 · Geraldton 1 · ~2,900km driven',
+    open:'Direct Sydney→Perth, 5h05, land the same afternoon. Fly home Sat 26 Sep. The cheapest flight on the whole page and the most expensive fortnight.',
+    days:[
+      {w:'Fremantle', d:'Sat 12 Sep', p:'Perth · Fremantle', s:'Fremantle terrace · $210', a:'Land mid-afternoon, three hours behind Sydney, no jet lag worth the name. Walk the West End — the best-preserved 19th-century port streetscape in the country — and eat on South Terrace.'},
+      {w:'Kings Park, Western Australia', d:'Sun 13 Sep', p:'Perth · Kings Park', s:'Fremantle terrace', a:'Kings Park is at full wildflower display in September, and it is free. Afternoon: the Art Gallery of WA, or the ferry to Rottnest if you would rather have a beach day.'},
+      {w:'Pinnacles Desert', d:'Mon 14 Sep', p:'→ Cervantes · the Pinnacles', s:'Cervantes beach house · $190', a:'Collect the car, drive 200km north. Limestone spires in the Nambung sand at late light, then Lake Thetis stromatolites. Short first day on purpose.'},
+      {w:'Kalbarri National Park', d:'Tue 15 Sep', p:'→ Kalbarri', s:'Kalbarri riverfront house · $190', a:'400km up the Indian Ocean Drive, wildflowers the whole way — this stretch is the reason people come in September. Arrive for the coastal cliffs at sunset.'},
+      {w:'Kalbarri National Park', d:'Wed 16 Sep', p:'Kalbarri · the gorges', s:'Kalbarri riverfront house', a:'Nature\'s Window and the Skywalk over the Murchison gorge early, before the heat. Z Bend in the afternoon. Park pass covers the fortnight.'},
+      {w:'Shark Bay', d:'Thu 17 Sep', p:'→ Shark Bay · Denham', s:'Denham beach unit · $200', a:'380km east then north. Shell Beach on the way in — ten metres deep of nothing but cockle shells. Eagle Bluff boardwalk for rays and sharks in clear water.'},
+      {w:'Hamelin Pool Marine Nature Reserve', d:'Fri 18 Sep', p:'Shark Bay · Monkey Mia', s:'Denham beach unit', a:'Monkey Mia dolphins at 7:45am, which is touristy and still good. Then Hamelin Pool stromatolites — living structures built by the organisms that first oxygenated the atmosphere. Nothing to look at, and extraordinary.'},
+      {w:'Coral Bay, Western Australia', d:'Sat 19 Sep', p:'→ Coral Bay', s:'Coral Bay beach shack · $280', a:'480km north, the longest drive of the trip. Arrive and swim straight off the beach — the reef starts about twenty metres out.'},
+      {w:'Ningaloo Coast', d:'Sun 20 Sep', p:'Coral Bay · Ningaloo', s:'Coral Bay beach shack', a:'Glass-bottom boat over the coral gardens, or a manta ray tour. Afternoon at Five Finger Reef. This is the least-visited world-class reef in Australia.'},
+      {w:'Ningaloo Coast', d:'Mon 21 Sep', p:'→ Exmouth', s:'Exmouth townhouse · $230', a:'150km north. Whale shark season runs to about now — $475 each and the single biggest line in this budget, but it is the reason to be here in September rather than January.'},
+      {w:'Cape Range National Park', d:'Tue 22 Sep', p:'Cape Range · Turquoise Bay', s:'Exmouth townhouse', a:'Turquoise Bay drift snorkel — walk in from the sand, let the current carry you along the reef, walk back. No boat, no tour, no crowd. Yardie Creek gorge in the afternoon.'},
+      {w:'Cape Range National Park', d:'Wed 23 Sep', p:'Cape Range · a slow day', s:'Exmouth townhouse', a:'Osprey Bay, Sandy Bay, Mandu Mandu gorge walk at dawn for the rock wallabies. Humpbacks pass close to shore through September.'},
+      {w:'Carnarvon, Western Australia', d:'Thu 24 Sep', p:'→ Carnarvon', s:'Carnarvon motel · $170', a:'370km back south. Break the drive properly rather than doing it in one hit — the Space and Technology Museum is better than it sounds, and the fruit stalls are the point.'},
+      {w:'Geraldton', d:'Fri 25 Sep', p:'→ Geraldton', s:'Geraldton apartment · $180', a:'480km. Monsignor Hawes\' Cathedral of St Francis Xavier is a genuinely strange building — a Spanish-mission Romanesque hybrid by a priest-architect, and the one thing here you would look at twice professionally.'},
+      {w:'Perth', d:'Sat 26 Sep', p:'→ Perth → home', s:'—', a:'420km back to Perth, drop the car, afternoon flight east. Long final day — consider an extra Perth night and flying Sunday if the dates allow.'}
+    ],
+    money:[['International flights','$1,200'],['Rooms, 14 nights','$3,360'],['Food &amp; daily life','$3,300'],['Car and ~2,900km of fuel','$1,750'],['Activities','$1,400'],['Insurance &amp; contingency','$1,280']],
+    verdict:'About $2,290 over the ceiling, and the most expensive option on the page — a domestic trip costing more than İstanbul. Two levers: the whale shark swim is $950 of the activity line, and dropping the Ningaloo leg for a southwest loop saves roughly 1,800km of driving. But cut either and you have removed the reason to go. Best weather odds and joint-best landscape on the list, and 11/30 for architecture — there is nothing here you would study.'
   }
 };
 
@@ -1066,6 +1120,7 @@ function visible(){
   if (state.filter === 'japan')  list = list.filter(d => d.groups.includes('japan'));
   if (state.filter === 'europe') list = list.filter(d => d.groups.includes('europe'));
   if (state.filter === 'americas') list = list.filter(d => d.groups.includes('americas'));
+  if (state.filter === 'oz')       list = list.filter(d => d.groups.includes('oz'));
   if (state.filter === 'scenery')  list = list.filter(d => d.land.s >= 8);
   if (state.filter === 'offradar') list = list.filter(d => d.land.q >= 7);
   if (state.filter === 'direct')   list = list.filter(d => (d.stops || 0) === 0);
@@ -1259,7 +1314,6 @@ function renderCards(list){
       </div>
       <div class="stays tours"><h4>Worth doing</h4>
         ${d.tours.map(s => `<div class="stay">
-          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
           <strong>${s.n}</strong><span>${s.a}</span>
           <nav class="links">
             <a href="${findUrl(s.n + ' ' + d.tag.split(' · ').pop() + ' tour')}" target="_blank" rel="noopener">Look it up</a>
@@ -1268,7 +1322,6 @@ function renderCards(list){
       </div>
       <div class="stays spots"><h4>Worth finding</h4>
         ${d.spots.map(s => `<div class="stay">
-          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
           <strong>${s.n}</strong><p>${s.d}</p>
           <nav class="links">
             <a href="${mapUrl(s.n + ', ' + d.tag.split(' · ').pop())}" target="_blank" rel="noopener">Map</a>
@@ -1277,7 +1330,6 @@ function renderCards(list){
       </div>
       <div class="stays"><h4>Where you'd stay — small, self-contained, mostly host-run</h4>
         ${d.stays.map(s => `<div class="stay">
-          <i class="thumb" data-q="${(clean(s.n) + ' ' + d.tag.split(' · ').pop()).replace(/"/g,'')}"></i>
           <strong>${s.n}</strong><span>${s.a}</span>
           <p>${s.d}</p>
           <nav class="links">
@@ -1373,40 +1425,23 @@ async function wikiByTitles(titles){
   return out;
 }
 
-async function wikiBySearch(q){
-  const url = 'https://en.wikipedia.org/w/api.php?action=query&generator=search'
-    + '&gsrsearch=' + encodeURIComponent(q) + '&gsrlimit=1&prop=pageimages&piprop=thumbnail'
-    + '&pithumbsize=600&format=json&origin=*';
-  const j = await (await fetch(url)).json();
-  return Object.values(j?.query?.pages || {})[0]?.thumbnail?.source || null;
-}
-
 async function fillThumbs(){
-  const nodes = [...document.querySelectorAll('.thumb:not([data-done])')];
+  const nodes = [...document.querySelectorAll('.thumb[data-w]:not([data-done])')];
+  document.querySelectorAll('.thumb:not([data-w])').forEach(n => n.classList.add('empty'));
   if (!nodes.length) return;
   nodes.forEach(n => n.setAttribute('data-done','1'));
-
-  const paint = (el, src) => {
-    if (src){ el.style.backgroundImage = `url("${src}")`; el.classList.add('loaded'); }
-    else el.classList.add('empty');
-  };
-
-  const titled = nodes.filter(n => n.dataset.w);
-  const wanted = [...new Set(titled.map(n => n.dataset.w))].filter(t => !(t in thumbCache));
+  const wanted = [...new Set(nodes.map(n => n.dataset.w))].filter(t => !(t in thumbCache));
   try {
     for (let i = 0; i < wanted.length; i += 40){
       const got = await wikiByTitles(wanted.slice(i, i + 40));
       wanted.slice(i, i + 40).forEach(t => { thumbCache[t] = got[t] || null; });
     }
   } catch { wanted.forEach(t => thumbCache[t] = null); }
-  titled.forEach(el => paint(el, thumbCache[el.dataset.w]));
-
-  for (const el of nodes.filter(n => !n.dataset.w)){
-    const q = el.dataset.q;
-    if (q in thumbCache){ paint(el, thumbCache[q]); continue; }
-    try { thumbCache[q] = await wikiBySearch(q); } catch { thumbCache[q] = null; }
-    paint(el, thumbCache[q]);
-  }
+  nodes.forEach(el => {
+    const src = thumbCache[el.dataset.w];
+    if (src){ el.style.backgroundImage = `url("${src}")`; el.classList.add('loaded'); }
+    else el.classList.add('empty');
+  });
 }
 
 function render(){
